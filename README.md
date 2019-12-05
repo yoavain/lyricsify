@@ -6,7 +6,6 @@
 [![Webpack](docs/img/webpack.png)](https://webpack.js.org/)
 [![TypeScript](docs/img/ts.png)](https://www.typescriptlang.org/)
 [![Electron](docs/img/electron.png)](https://electronjs.org/)
-[![Redux](docs/img/redux.png)](https://redux.js.org/)
 [![Jest](docs/img/jest.png)](https://facebook.github.io/jest/)
 
 
