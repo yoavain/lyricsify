@@ -14,7 +14,7 @@ interface Column {
     label: string;
     minWidth?: number;
     align?: "right";
-    format?: (value: number) => string;
+    format?: (value: any) => string;
 }
 
 const columns: Column[] = [
@@ -64,7 +64,7 @@ const columns: Column[] = [
         label: "Has Lyrics",
         minWidth: 50,
         align: "right",
-        format: (value: number) => moment(value).format("MM/DD/YYYY")
+        format: (value: boolean) => (value ? "Yes" : "No")
     }
 ];
 
@@ -133,7 +133,7 @@ export default function FilesTable() {
                                         const value = row[column.id];
                                         return (
                                             <TableCell key={column.id} align={column.align}>
-                                                {column.format && typeof value === "number" ? column.format(value) : value}
+                                                {column.format ? column.format(value) : value}
                                             </TableCell>
                                         );
                                     })}
