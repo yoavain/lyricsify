@@ -179,7 +179,7 @@ export default function FilesTable() {
                 <Table stickyHeader aria-label="sticky table">
                     <TableHead>
                         <TableRow>
-                            {columns.map(column => (
+                            {columns.map((column: Column) => (
                                 <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
                                     {column.label}
                                 </TableCell>
@@ -190,7 +190,7 @@ export default function FilesTable() {
                         {rows.map((row: RowData) => {
                             return (
                                 <TableRow hover role="checkbox" tabIndex={-1} key={row.filename}>
-                                    {columns.map(column => {
+                                    {columns.map((column: Column) => {
                                         const value = row[column.id];
                                         return (
                                             <TableCell key={column.id} align={column.align}>
