@@ -1,13 +1,13 @@
-import * as React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-import * as numeral from "numeral";
 import * as moment from "moment";
+import * as numeral from "numeral";
+import * as React from "react";
 
 interface Column {
     id: "filename" | "path" | "tag" | "title" | "artist" | "album" | "track" | "year" | "length" | "size" | "lastModified" | "hasLyrics";
@@ -187,7 +187,7 @@ export default function FilesTable() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map(row => {
+                        {rows.map((row: RowData) => {
                             return (
                                 <TableRow hover role="checkbox" tabIndex={-1} key={row.filename}>
                                     {columns.map(column => {
