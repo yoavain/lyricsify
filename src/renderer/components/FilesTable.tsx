@@ -56,14 +56,12 @@ const columns: Column[] = [
         id: "lastModified",
         label: "Last Modified",
         minWidth: 50,
-        align: "right",
         format: (value: number) => moment(value).format("MM/DD/YYYY")
     },
     {
         id: "hasLyrics",
         label: "Has Lyrics",
         minWidth: 50,
-        align: "right",
         format: (value: boolean) => (value ? "Yes" : "No")
     }
 ];
