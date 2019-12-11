@@ -110,7 +110,7 @@
         "transform": {
             "^.+\\.tsx?$": "ts-jest"
         },
-        "testRegex": "(/test/.+\\.spec)\\.tsx?$",
+        "testRegex": "(/test/.+\\.test)\\.tsx?$",
         "moduleFileExtensions": [
             "ts",
             "tsx",
