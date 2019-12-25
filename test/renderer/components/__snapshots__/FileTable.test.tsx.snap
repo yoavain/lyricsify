@@ -2,7 +2,7 @@
 
 exports[`FilesTable component renders correctly 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 makeStyles-root-1 MuiPaper-rounded"
+  className="MuiPaper-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="makeStyles-tableWrapper-2"
