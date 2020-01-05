@@ -58,7 +58,7 @@
         "@types/react-hot-loader": "4.1.1",
         "@types/react-test-renderer": "16.9.1",
         "@types/webdriverio": "4.13.3",
-        "@types/webpack-env": "1.14.1",
+        "@types/webpack-env": "1.15.0",
         "babel-loader": "8.0.6",
         "concurrently": "5.0.2",
         "cross-env": "6.0.3",
