@@ -72,7 +72,7 @@
         "image-webpack-loader": "6.0.0",
         "jest": "24.9.0",
         "lint-staged": "10.0.0-beta.14",
-        "node-sass": "4.13.0",
+        "node-sass": "4.13.1",
         "prettier": "1.19.1",
         "react-hot-loader": "4.12.18",
         "react-test-renderer": "16.12.0",
