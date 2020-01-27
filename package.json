@@ -71,7 +71,7 @@
         "husky": "4.2.1",
         "image-webpack-loader": "6.0.0",
         "jest": "25.1.0",
-        "lint-staged": "10.0.2",
+        "lint-staged": "10.0.3",
         "node-sass": "4.13.1",
         "prettier": "1.19.1",
         "react-hot-loader": "4.12.19",
