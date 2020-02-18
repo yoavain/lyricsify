@@ -1,0 +1,458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileListPanel component renders correctly 1`] = `
+<ul
+  className="MuiList-root makeStyles-root-1 MuiList-padding"
+>
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        Happens To The Heart
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        Moving On
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        The Night of Santiago
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        Thanks For The Dance
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        It's Torn
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        The Goal
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        Puppets
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        The Hills
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+  <li
+    className="MuiListItem-root MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiAvatar-fallback"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        Listen To The Hummingbird
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        <span
+          className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
+        >
+          Leonard Cohen
+        </span>
+        Thanks For The Dance
+         [
+        2019
+        ]
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiDivider-root MuiDivider-inset"
+    role="separator"
+  />
+</ul>
+`;

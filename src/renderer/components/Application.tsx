@@ -4,8 +4,11 @@ import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import * as React from "react";
 import { useState } from "react";
 import { hot } from "react-hot-loader/root";
-// import Counter from "./Counter";
-import FilesTable from "./FilesTable";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import FileListPanel from "./FileListPanel";
+import { rows } from "../../main/staticData";
+import AppBar from "@material-ui/core/AppBar";
 
 const themeOptions: ThemeOptions = {
     palette: {
@@ -44,10 +47,19 @@ const Application = () => {
     return (
         <MuiThemeProvider theme={themeConfig}>
             <div>
-                <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode} />} />
-                Hello World from Electron!
-                {/*<Counter />*/}
-                <FilesTable />
+                <Grid container spacing={1}>
+                    <AppBar position="static">
+                        <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
+                    </AppBar>
+                </Grid>
+                <Grid container spacing={1}>
+                    <Grid item xs>
+                        <FileListPanel rows={rows}/>
+                    </Grid>
+                    <Grid item xs>
+                        <Paper>Lyrics Placeholder</Paper>
+                    </Grid>
+                </Grid>
             </div>
         </MuiThemeProvider>
     );
