@@ -12,19 +12,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="Happens To The Heart"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -62,19 +56,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="Moving On"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -112,19 +100,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="The Night of Santiago"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -162,19 +144,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="Thanks For The Dance"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -212,19 +188,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="It's Torn"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -262,19 +232,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="The Goal"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -312,19 +276,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="Puppets"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -362,19 +320,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="The Hills"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
@@ -412,19 +364,13 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+        className="MuiAvatar-root MuiAvatar-rounded makeStyles-large-3"
       >
-        <svg
-          aria-hidden="true"
-          className="MuiSvgIcon-root MuiAvatar-fallback"
-          focusable="false"
-          role="presentation"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-          />
-        </svg>
+        <img
+          alt="Listen To The Hummingbird"
+          className="MuiAvatar-img"
+          src="test-file-stub"
+        />
       </div>
     </div>
     <div
