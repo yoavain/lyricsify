@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme: Theme) =>
         inline: {
             display: 'inline',
         },
+        large: {
+            width: theme.spacing(6),
+            height: theme.spacing(6)
+        }
     }),
 );
 
@@ -33,7 +37,7 @@ export default function FileListPanel(props: { rows: RowData[] }) {
                     return <React.Fragment>
                         <ListItem alignItems="flex-start">
                             <ListItemAvatar>
-                                <Avatar alt={row.title}/>
+                                <Avatar alt={row.title} src={row.thumbnailLocation} variant="rounded" className={classes.large}/>
                             </ListItemAvatar>
                             <ListItemText
                                 primary={row.title}
