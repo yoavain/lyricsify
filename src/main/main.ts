@@ -5,7 +5,13 @@ import * as url from "url";
 let mainWindow: BrowserWindow | null;
 
 const createWindow = async () => {
-    mainWindow = new BrowserWindow({ width: 800, height: 600 });
+    mainWindow = new BrowserWindow({
+        width: 800,
+        height: 600,
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
 
     mainWindow.loadURL(
         url.format({

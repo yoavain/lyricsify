@@ -9,6 +9,7 @@ import Paper from "@material-ui/core/Paper";
 import FileListPanel from "./FileListPanel";
 import { rows } from "../../main/staticData";
 import AppBar from "@material-ui/core/AppBar";
+import SelectFolderButton from "./SelectFolderButton";
 
 const themeOptions: ThemeOptions = {
     palette: {
@@ -50,6 +51,7 @@ const Application = () => {
                 <Grid container spacing={1}>
                     <AppBar position="static">
                         <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
+                        <SelectFolderButton />
                     </AppBar>
                 </Grid>
                 <Grid container spacing={1}>
