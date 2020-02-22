@@ -1,4 +1,5 @@
-import { BrowserWindow, dialog, OpenDialogOptions, remote } from "electron";
+import { remote, BrowserWindow, OpenDialogOptions } from "electron";
+const { dialog } = require('electron').remote
 import * as React from "react";
 import { useState } from "react";
 
