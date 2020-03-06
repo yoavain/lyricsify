@@ -1,4 +1,4 @@
-const cover = require("../renderer/resources/cover.jpg")
+import cover from "../renderer/resources/cover.jpg";
 
 export interface RowData {
     filename: string;
@@ -16,7 +16,7 @@ export interface RowData {
     thumbnailLocation?: any;
 }
 
-export const rows: Array<RowData> = [
+export const rows: RowData[] = [
     {
         filename: "01 - Happens To The Heart.flac",
         path: "D:\\Music\\Leonard Cohen\\2019 - Thanks For The Dance\\",
