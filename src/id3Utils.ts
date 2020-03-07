@@ -1,6 +1,6 @@
 import * as fs from "fs";
-const { diff } = require("deep-diff");
-const NodeID3 = require("node-id3");
+import { diff } from "deep-diff";
+import * as NodeID3 from "node-id3";
 
 export function addLyrics(inFile: string, outFile: string, lyrics: string) {
     const tags = NodeID3.read(inFile);
@@ -11,7 +11,7 @@ export function addLyrics(inFile: string, outFile: string, lyrics: string) {
             text: lyrics
         }
     };
-    fs.copyFile(inFile, outFile, err => {
+    fs.copyFile(inFile, outFile, (err) => {
         if (err) {
             throw err;
         }

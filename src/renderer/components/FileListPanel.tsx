@@ -39,8 +39,8 @@ export default function FileListPanel(props: { rows: RowData[] }) {
         <List className={classes.root}>
             {props.rows.map((row: RowData, index) => {
                 return (
-                    <React.Fragment>
-                        <ListItem alignItems="flex-start" button selected={selectedIndex === index} onClick={event => handleListItemClick(event, index)}>
+                    <React.Fragment key={row.title}>
+                        <ListItem alignItems="flex-start" button selected={selectedIndex === index} onClick={(event) => handleListItemClick(event, index)}>
                             <ListItemAvatar>
                                 <Avatar alt={row.title} src={row.thumbnailLocation} variant="rounded" className={classes.large} />
                             </ListItemAvatar>
