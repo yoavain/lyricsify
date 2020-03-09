@@ -30,14 +30,14 @@ const useStyles = makeStyles((theme: Theme) =>
 interface FileListPanelProps {
     rows: RowData[];
     selectedIndex: number;
-    setSelectedIndex: (selectedIndex: number) => void;
+    onSelectItemClick: (selectedIndex: number) => void;
 }
 
 const FileListPanel = (props: FileListPanelProps) => {
     const classes = useStyles();
 
     const handleListItemClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
-        props.setSelectedIndex(index);
+        props.onSelectItemClick(index);
     };
 
     return (

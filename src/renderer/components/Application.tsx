@@ -60,12 +60,12 @@ const Application = () => {
                 <Grid container spacing={1}>
                     <AppBar position="static">
                         <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
-                        { dir && <SelectFolderButton dir={dir} setDir={setDir}/> }
+                        { dir && <SelectFolderButton dir={dir} onSelectDir={setDir}/> }
                     </AppBar>
                 </Grid>
                 <Grid container spacing={1}>
                     <Grid item xs>
-                        <FileListPanel rows={rows} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
+                        <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex} />
                     </Grid>
                     <Grid item xs>
                         <Paper>Lyrics Placeholder</Paper>

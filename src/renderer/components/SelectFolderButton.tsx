@@ -4,7 +4,7 @@ import * as React from "react";
 
 interface SelectFolderButtonProps {
     dir: string;
-    setDir: (dir: string) => void;
+    onSelectDir: (dir: string) => void;
 }
 
 const SelectFolderButton: React.FunctionComponent<SelectFolderButtonProps> = (props: SelectFolderButtonProps) => {
@@ -20,7 +20,7 @@ const SelectFolderButton: React.FunctionComponent<SelectFolderButtonProps> = (pr
 
     const selectFolder = () => {
         selectDirectoryWindow().then((openDialogReturnValue) => {
-            props.setDir(openDialogReturnValue.filePaths[0]);
+            props.onSelectDir(openDialogReturnValue.filePaths[0]);
         });
     };
 
