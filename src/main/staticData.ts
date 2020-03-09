@@ -3,16 +3,16 @@ import cover from "../renderer/resources/cover.jpg";
 export interface RowData {
     filename: string;
     path: string;
-    tag: string;
-    title: string;
-    artist: string;
-    album: string;
-    track: number;
-    year: number;
-    length: number;
-    size: number;
-    lastModified: number;
-    hasLyrics: boolean;
+    tag?: string;
+    title?: string;
+    artist?: string;
+    album?: string;
+    track?: string | number;
+    year?: number;
+    length?: number;
+    size?: number;
+    lastModified?: number;
+    hasLyrics?: boolean;
     thumbnailLocation?: any;
 }
 

@@ -7,9 +7,10 @@ import { hot } from "react-hot-loader/root";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import FileListPanel from "./FileListPanel";
-import { rows } from "../../main/staticData";
 import AppBar from "@material-ui/core/AppBar";
 import SelectFolderButton from "./SelectFolderButton";
+import { folderParser } from "../../main/folderParser";
+import { RowData } from "../../main/staticData";
 
 const themeOptions: ThemeOptions = {
     palette: {
@@ -44,6 +45,14 @@ const useDarkTheme = (): [ThemeOptions, () => void] => {
 const Application = () => {
     const [theme, toggleDarkMode] = useDarkTheme();
     const themeConfig: Theme = createMuiTheme(theme);
+    const [dir, setDir] = useState("");
+    const [selectedIndex, setSelectedIndex] = React.useState(-1);
+    const [rows, setRows] = React.useState<RowData[]>([]);
+
+    if (dir) {
+        folderParser(dir)
+            .then((rows: RowData[]) => setRows(rows));
+    }
 
     return (
         <MuiThemeProvider theme={themeConfig}>
@@ -51,12 +60,12 @@ const Application = () => {
                 <Grid container spacing={1}>
                     <AppBar position="static">
                         <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
-                        <SelectFolderButton />
+                        <SelectFolderButton dir={dir} onSelectDir={setDir}/>
                     </AppBar>
                 </Grid>
                 <Grid container spacing={1}>
                     <Grid item xs>
-                        <FileListPanel rows={rows}/>
+                        {dir && <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/>}
                     </Grid>
                     <Grid item xs>
                         <Paper>Lyrics Placeholder</Paper>

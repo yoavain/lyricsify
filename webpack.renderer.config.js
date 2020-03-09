@@ -13,6 +13,12 @@ module.exports = merge.smart(baseConfig, {
     module: {
         rules: [
             {
+                test: /node_modules[\/\\](iconv-lite)[\/\\].+/,
+                resolve: {
+                    aliasFields: ['main']
+                }
+            },
+            {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
