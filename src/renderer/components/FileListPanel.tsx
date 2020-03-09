@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
 interface FileListPanelProps {
     rows: RowData[];
     selectedIndex: number;
-    setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
+    setSelectedIndex: (selectedIndex: number) => void;
 }
 
 const FileListPanel = (props: FileListPanelProps) => {

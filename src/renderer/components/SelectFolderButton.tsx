@@ -4,7 +4,7 @@ import * as React from "react";
 
 interface SelectFolderButtonProps {
     dir: string;
-    setDir: React.Dispatch<React.SetStateAction<string>>;
+    setDir: (dir: string) => void;
 }
 
 const SelectFolderButton: React.FunctionComponent<SelectFolderButtonProps> = (props: SelectFolderButtonProps) => {
