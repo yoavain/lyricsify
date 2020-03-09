@@ -1,11 +1,13 @@
 import { remote, BrowserWindow, OpenDialogOptions } from "electron";
 const { dialog } = require("electron").remote;
 import * as React from "react";
-import { useState } from "react";
 
-const SelectFolderButton: React.FunctionComponent = () => {
-    const [dir, setDir] = useState("");
+interface SelectFolderButtonProps {
+    dir: string;
+    setDir: React.Dispatch<React.SetStateAction<string>>;
+}
 
+const SelectFolderButton: React.FunctionComponent<SelectFolderButtonProps> = (props: SelectFolderButtonProps) => {
     const selectDirectoryWindow = (): Promise<Electron.OpenDialogReturnValue> => {
         const mainWindow: BrowserWindow = remote.getCurrentWindow();
         if (mainWindow === null) {
@@ -18,14 +20,14 @@ const SelectFolderButton: React.FunctionComponent = () => {
 
     const selectFolder = () => {
         selectDirectoryWindow().then((openDialogReturnValue) => {
-            setDir(openDialogReturnValue.filePaths[0]);
+            props.setDir(openDialogReturnValue.filePaths[0]);
         });
     };
 
     return (
         <div className="counter">
             <button id="increment" onClick={selectFolder}>
-                {dir || "Select Directory"}
+                {props.dir || "Select Directory"}
             </button>
         </div>
     );
