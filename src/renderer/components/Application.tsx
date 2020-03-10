@@ -68,7 +68,9 @@ const Application = () => {
                         {dir && <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/>}
                     </Grid>
                     <Grid item xs>
-                        <Paper>Lyrics Placeholder</Paper>
+                        <Paper>Lyrics
+                            { selectedIndex >= 0 && <div>{rows[selectedIndex].lyrics}</div> }
+                        </Paper>
                     </Grid>
                 </Grid>
             </div>

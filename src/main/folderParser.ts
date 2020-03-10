@@ -1,6 +1,7 @@
 import { RowData } from "./staticData";
 import { Dirent, promises as fs } from "fs";
-import * as NodeID3 from "node-id3";
+import * as MusicMetadata from "music-metadata";
+import { IAudioMetadata, ITag } from "music-metadata";
 import * as path from "path";
 
 enum SUPPORTED_FILE_TYPES {
@@ -12,6 +13,16 @@ const isRelevantFile = (file: Dirent): boolean => {
     return file.isFile() && (file.name.toLowerCase().endsWith(SUPPORTED_FILE_TYPES.FLAC) || file.name.toLowerCase().endsWith(SUPPORTED_FILE_TYPES.MP3));
 };
 
+const getLyrics = (audioMetadata: IAudioMetadata): string | undefined => {
+    if (audioMetadata?.format?.tagTypes?.includes("ID3v2.3")) {
+        const id3v2Tag: ITag[] = audioMetadata?.native?.["ID3v2.3"];
+        const lyricsTag = id3v2Tag?.find((nativeTag: ITag) => nativeTag?.id === "USLT");
+        return lyricsTag?.value?.text;
+    }
+
+    return undefined;
+};
+
 export const folderParser = async (dir: string): Promise<Array<RowData>> => {
     const files: Dirent[] = await fs.readdir(dir, { withFileTypes: true });
     const relevantFiles: Dirent[] = files.filter((anyFile: Dirent) => isRelevantFile(anyFile));
@@ -21,25 +32,27 @@ export const folderParser = async (dir: string): Promise<Array<RowData>> => {
     for (const audioFile of relevantFiles) {
         const audioFileName = audioFile.name;
         const audioFilePath = path.resolve(dir, audioFileName);
-        const fileContent: Buffer = await fs.readFile(audioFilePath);
-        const tags: NodeID3.Tags = NodeID3.read(fileContent);
-        if (tags) {
+        const fileStats = await fs.stat(audioFilePath);
+        const audioMetadata: IAudioMetadata = await MusicMetadata.parseFile(audioFilePath);
+
+        if (audioMetadata) {
             rowsData.push({
                 filename: audioFileName,
-                title: tags.title,
-                artist: tags.artist,
-                album: tags.album,
-                year: tags.year,
-                track: tags.trackNumber,
-                hasLyrics: false,
-                lastModified: 0,
-                length: tags.length,
+                title: audioMetadata.common?.title,
+                artist: audioMetadata.common?.artist,
+                album: audioMetadata.common?.album,
+                year: audioMetadata.common?.year,
+                track: audioMetadata.common?.track?.no,
+                lyrics: getLyrics(audioMetadata),
+                lastModified: fileStats?.mtimeMs,
+                length: audioMetadata.format?.duration,
                 path: audioFilePath,
-                size: tags.size,
-                tag: tags.fileType
+                size: fileStats?.size,
+                tag: audioMetadata.format?.container
             });
         }
     }
     
     return rowsData;
 };
+

@@ -12,7 +12,7 @@ export interface RowData {
     length?: number;
     size?: number;
     lastModified?: number;
-    hasLyrics?: boolean;
+    lyrics?: string;
     thumbnailLocation?: any;
 }
 
@@ -29,7 +29,7 @@ export const rows: RowData[] = [
         length: 273,
         size: 22749256,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -44,7 +44,7 @@ export const rows: RowData[] = [
         length: 192,
         size: 14556156,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -59,7 +59,7 @@ export const rows: RowData[] = [
         length: 255,
         size: 20998200,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -74,7 +74,7 @@ export const rows: RowData[] = [
         length: 253,
         size: 18920215,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -89,7 +89,7 @@ export const rows: RowData[] = [
         length: 178,
         size: 13998876,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -104,7 +104,7 @@ export const rows: RowData[] = [
         length: 72,
         size: 5576134,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -119,7 +119,7 @@ export const rows: RowData[] = [
         length: 160,
         size: 12369996,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -134,7 +134,7 @@ export const rows: RowData[] = [
         length: 258,
         size: 25574353,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     },
     {
@@ -149,7 +149,7 @@ export const rows: RowData[] = [
         length: 121,
         size: 7459732,
         lastModified: 1574467200000,
-        hasLyrics: false,
+        lyrics: undefined,
         thumbnailLocation: cover
     }
 ];
