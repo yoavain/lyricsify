@@ -1,13 +1,14 @@
-import { Card, CardContent, createMuiTheme, FormControlLabel, MuiThemeProvider, Switch, Theme, Typography } from "@material-ui/core";
+import { createMuiTheme, FormControlLabel, MuiThemeProvider, Switch, Theme } from "@material-ui/core";
 import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
 import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import * as React from "react";
 import { useState } from "react";
 import { hot } from "react-hot-loader/root";
 import Grid from "@material-ui/core/Grid";
-import FileListPanel from "./FileListPanel";
 import AppBar from "@material-ui/core/AppBar";
+import FileListPanel from "./FileListPanel";
 import SelectFolderButton from "./SelectFolderButton";
+import LyricsCard from "./LyricsCard";
 import { folderParser } from "../../main/folderParser";
 import { RowData } from "../../main/staticData";
 
@@ -46,9 +47,6 @@ const onSelectDir =(dir: string, setDir: (dir: string) => void, setInit: (init: 
     setInit(false);
 };
 
-const prepareLyrics = (lyrics: string) => {
-    return lyrics.split("\n").map((line, index) => <div key={index}>{line}</div>);
-};
 
 const Application = () => {
     const [theme, toggleDarkMode] = useDarkTheme();
@@ -79,19 +77,7 @@ const Application = () => {
                     </Grid>
                     <Grid item xs>
                         { selectedIndex >= 0 &&
-                            <Card>
-                                <CardContent>
-                                    <Typography variant="h4" component="h2">
-                                        {rows[selectedIndex].title} - Lyrics
-                                    </Typography>
-                                    <Typography variant="h5" component="h2">
-                                        {rows[selectedIndex].artist}
-                                    </Typography>
-                                    <Typography variant="h6" component="h2">
-                                        {prepareLyrics(rows[selectedIndex].lyrics ?? "")}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
+                        <LyricsCard title={rows[selectedIndex].title} artist={rows[selectedIndex].artist} lyrics={rows[selectedIndex].lyrics}/>
                         }
                     </Grid>
                 </Grid>
