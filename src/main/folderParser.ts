@@ -1,9 +1,8 @@
 import { RowData } from "./staticData";
 import { Dirent, promises as fs } from "fs";
 import * as MusicMetadata from "music-metadata";
-import { IAudioMetadata } from "music-metadata";
+import { IAudioMetadata, ITag } from "music-metadata";
 import * as path from "path";
-import { ITag } from "music-metadata/lib/type";
 
 enum SUPPORTED_FILE_TYPES {
     FLAC = ".flac",
