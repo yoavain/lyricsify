@@ -13,7 +13,7 @@ export interface RowData {
     size?: number;
     lastModified?: number;
     lyrics?: string;
-    thumbnailLocation?: any;
+    thumbnail?: string;
 }
 
 export const rows: RowData[] = [
@@ -30,7 +30,7 @@ export const rows: RowData[] = [
         size: 22749256,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "02 - Moving On.flac",
@@ -45,7 +45,7 @@ export const rows: RowData[] = [
         size: 14556156,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "03 - The Night of Santiago.flac",
@@ -60,7 +60,7 @@ export const rows: RowData[] = [
         size: 20998200,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "04 - Thanks For The Dance.flac",
@@ -75,7 +75,7 @@ export const rows: RowData[] = [
         size: 18920215,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "05 - It's Torn.flac",
@@ -90,7 +90,7 @@ export const rows: RowData[] = [
         size: 13998876,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "06 - The Goal.flac",
@@ -105,7 +105,7 @@ export const rows: RowData[] = [
         size: 5576134,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "07 - Puppets.flac",
@@ -120,7 +120,7 @@ export const rows: RowData[] = [
         size: 12369996,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "08 - The Hills.flac",
@@ -135,7 +135,7 @@ export const rows: RowData[] = [
         size: 25574353,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     },
     {
         filename: "09 - Listen To The Hummingbird.flac",
@@ -150,6 +150,6 @@ export const rows: RowData[] = [
         size: 7459732,
         lastModified: 1574467200000,
         lyrics: undefined,
-        thumbnailLocation: cover
+        thumbnail: cover
     }
 ];
