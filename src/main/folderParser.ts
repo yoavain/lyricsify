@@ -3,6 +3,7 @@ import { Dirent, promises as fs } from "fs";
 import * as MusicMetadata from "music-metadata";
 import { IAudioMetadata } from "music-metadata";
 import * as path from "path";
+import { ITag } from "music-metadata/lib/type";
 
 enum SUPPORTED_FILE_TYPES {
     FLAC = ".flac",
@@ -11,6 +12,17 @@ enum SUPPORTED_FILE_TYPES {
 
 const isRelevantFile = (file: Dirent): boolean => {
     return file.isFile() && (file.name.toLowerCase().endsWith(SUPPORTED_FILE_TYPES.FLAC) || file.name.toLowerCase().endsWith(SUPPORTED_FILE_TYPES.MP3));
+};
+
+const getLyrics = (audioMetadata: IAudioMetadata): string | null => {
+
+    if (audioMetadata?.format?.tagTypes?.includes("ID3v2.3")) {
+        const id3v2Tag: ITag[] = audioMetadata?.native?.["ID3v2.3"];
+        const lyricsTag = id3v2Tag?.find((nativeTag: ITag) => nativeTag?.id === "USLT");
+        return lyricsTag?.value?.text;
+    }
+
+    return null;
 };
 
 export const folderParser = async (dir: string): Promise<Array<RowData>> => {
@@ -33,8 +45,8 @@ export const folderParser = async (dir: string): Promise<Array<RowData>> => {
                 album: audioMetadata.common?.album,
                 year: audioMetadata.common?.year,
                 track: audioMetadata.common?.track?.no,
-                hasLyrics: false,
-                lastModified: 0,
+                hasLyrics: !!getLyrics(audioMetadata),
+                lastModified: fileStats?.mtimeMs,
                 length: audioMetadata.format?.duration,
                 path: audioFilePath,
                 size: fileStats?.size,
@@ -45,3 +57,4 @@ export const folderParser = async (dir: string): Promise<Array<RowData>> => {
     
     return rowsData;
 };
+
