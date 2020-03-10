@@ -1,6 +1,7 @@
 import { RowData } from "./staticData";
 import { Dirent, promises as fs } from "fs";
-import * as NodeID3 from "node-id3";
+import * as MusicMetadata from "music-metadata";
+import { IAudioMetadata } from "music-metadata";
 import * as path from "path";
 
 enum SUPPORTED_FILE_TYPES {
@@ -21,22 +22,23 @@ export const folderParser = async (dir: string): Promise<Array<RowData>> => {
     for (const audioFile of relevantFiles) {
         const audioFileName = audioFile.name;
         const audioFilePath = path.resolve(dir, audioFileName);
-        const fileContent: Buffer = await fs.readFile(audioFilePath);
-        const tags: NodeID3.Tags = NodeID3.read(fileContent);
-        if (tags) {
+        const fileStats = await fs.stat(audioFilePath);
+        const audioMetadata: IAudioMetadata = await MusicMetadata.parseFile(audioFilePath);
+
+        if (audioMetadata) {
             rowsData.push({
                 filename: audioFileName,
-                title: tags.title,
-                artist: tags.artist,
-                album: tags.album,
-                year: tags.year,
-                track: tags.trackNumber,
+                title: audioMetadata.common?.title,
+                artist: audioMetadata.common?.artist,
+                album: audioMetadata.common?.album,
+                year: audioMetadata.common?.year,
+                track: audioMetadata.common?.track?.no,
                 hasLyrics: false,
                 lastModified: 0,
-                length: tags.length,
+                length: audioMetadata.format?.duration,
                 path: audioFilePath,
-                size: tags.size,
-                tag: tags.fileType
+                size: fileStats?.size,
+                tag: audioMetadata.format?.container
             });
         }
     }
