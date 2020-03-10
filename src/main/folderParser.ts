@@ -1,7 +1,7 @@
 import { RowData } from "./staticData";
 import { Dirent, promises as fs } from "fs";
 import * as MusicMetadata from "music-metadata";
-import { IAudioMetadata, ITag } from "music-metadata";
+import { IAudioMetadata, IPicture, ITag } from "music-metadata";
 import * as path from "path";
 
 enum SUPPORTED_FILE_TYPES {
@@ -20,6 +20,14 @@ const getLyrics = (audioMetadata: IAudioMetadata): string | undefined => {
         return lyricsTag?.value?.text;
     }
 
+    return undefined;
+};
+
+const getThumbnail = (audioMetadata: IAudioMetadata): string | undefined => {
+    const thumbnail: IPicture | undefined = audioMetadata?.common?.picture?.[0];
+    if (thumbnail) {
+        return URL.createObjectURL(new Blob([new Uint8Array(thumbnail.data)], { type: thumbnail.format }));
+    }
     return undefined;
 };
 
@@ -48,7 +56,8 @@ export const folderParser = async (dir: string): Promise<Array<RowData>> => {
                 length: audioMetadata.format?.duration,
                 path: audioFilePath,
                 size: fileStats?.size,
-                tag: audioMetadata.format?.container
+                tag: audioMetadata.format?.container,
+                thumbnail: getThumbnail(audioMetadata)
             });
         }
     }

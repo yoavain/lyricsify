@@ -47,7 +47,7 @@ const FileListPanel = (props: FileListPanelProps) => {
                     <React.Fragment key={row.title}>
                         <ListItem alignItems="flex-start" button selected={props.selectedIndex === index} onClick={(event) => handleListItemClick(event, index)}>
                             <ListItemAvatar>
-                                <Avatar alt={row.title} src={row.thumbnailLocation} variant="rounded" className={classes.large} />
+                                <Avatar alt={row.title} src={row.thumbnail} variant="rounded" className={classes.large} />
                             </ListItemAvatar>
                             <ListItemText
                                 primary={row.title}

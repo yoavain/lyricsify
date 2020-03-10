@@ -1,11 +1,10 @@
-import { createMuiTheme, FormControlLabel, MuiThemeProvider, Switch, Theme } from "@material-ui/core";
+import { Card, CardContent, createMuiTheme, FormControlLabel, MuiThemeProvider, Switch, Theme, Typography } from "@material-ui/core";
 import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
 import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import * as React from "react";
 import { useState } from "react";
 import { hot } from "react-hot-loader/root";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import FileListPanel from "./FileListPanel";
 import AppBar from "@material-ui/core/AppBar";
 import SelectFolderButton from "./SelectFolderButton";
@@ -42,16 +41,27 @@ const useDarkTheme = (): [ThemeOptions, () => void] => {
     return [theme, toggleDarkMode];
 };
 
+const onSelectDir =(dir: string, setDir: (dir: string) => void, setInit: (init: boolean) => void): void => {
+    setDir(dir);
+    setInit(false);
+};
+
+const prepareLyrics = (lyrics: string) => {
+    return lyrics.split("\n").map((line, index) => <div key={index}>{line}</div>);
+};
+
 const Application = () => {
     const [theme, toggleDarkMode] = useDarkTheme();
     const themeConfig: Theme = createMuiTheme(theme);
+    const [init, setInit] = useState(false);
     const [dir, setDir] = useState("");
     const [selectedIndex, setSelectedIndex] = React.useState(-1);
     const [rows, setRows] = React.useState<RowData[]>([]);
 
-    if (dir) {
+    if (!init && dir) {
         folderParser(dir)
-            .then((rows: RowData[]) => setRows(rows));
+            .then((rows: RowData[]) => setRows(rows))
+            .finally(() => setInit(true));
     }
 
     return (
@@ -60,7 +70,7 @@ const Application = () => {
                 <Grid container spacing={1}>
                     <AppBar position="static">
                         <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
-                        <SelectFolderButton dir={dir} onSelectDir={setDir}/>
+                        <SelectFolderButton dir={dir} onSelectDir={(dir) => onSelectDir(dir, setDir, setInit)}/>
                     </AppBar>
                 </Grid>
                 <Grid container spacing={1}>
@@ -68,9 +78,21 @@ const Application = () => {
                         {dir && <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/>}
                     </Grid>
                     <Grid item xs>
-                        <Paper>Lyrics
-                            { selectedIndex >= 0 && <div>{rows[selectedIndex].lyrics}</div> }
-                        </Paper>
+                        { selectedIndex >= 0 &&
+                            <Card>
+                                <CardContent>
+                                    <Typography variant="h4" component="h2">
+                                        {rows[selectedIndex].title} - Lyrics
+                                    </Typography>
+                                    <Typography variant="h5" component="h2">
+                                        {rows[selectedIndex].artist}
+                                    </Typography>
+                                    <Typography variant="h6" component="h2">
+                                        {prepareLyrics(rows[selectedIndex].lyrics ?? "")}
+                                    </Typography>
+                                </CardContent>
+                            </Card>
+                        }
                     </Grid>
                 </Grid>
             </div>
