@@ -13,15 +13,14 @@ const isRelevantFile = (file: Dirent): boolean => {
     return file.isFile() && (file.name.toLowerCase().endsWith(SUPPORTED_FILE_TYPES.FLAC) || file.name.toLowerCase().endsWith(SUPPORTED_FILE_TYPES.MP3));
 };
 
-const getLyrics = (audioMetadata: IAudioMetadata): string | null => {
-
+const getLyrics = (audioMetadata: IAudioMetadata): string | undefined => {
     if (audioMetadata?.format?.tagTypes?.includes("ID3v2.3")) {
         const id3v2Tag: ITag[] = audioMetadata?.native?.["ID3v2.3"];
         const lyricsTag = id3v2Tag?.find((nativeTag: ITag) => nativeTag?.id === "USLT");
         return lyricsTag?.value?.text;
     }
 
-    return null;
+    return undefined;
 };
 
 export const folderParser = async (dir: string): Promise<Array<RowData>> => {
@@ -44,7 +43,7 @@ export const folderParser = async (dir: string): Promise<Array<RowData>> => {
                 album: audioMetadata.common?.album,
                 year: audioMetadata.common?.year,
                 track: audioMetadata.common?.track?.no,
-                hasLyrics: !!getLyrics(audioMetadata),
+                lyrics: getLyrics(audioMetadata),
                 lastModified: fileStats?.mtimeMs,
                 length: audioMetadata.format?.duration,
                 path: audioFilePath,
