@@ -8,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
-import { RowData } from "../../main/staticData";
+import { RowData } from "../../../test/resources/staticData";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -45,7 +45,7 @@ const FileListPanel = (props: FileListPanelProps) => {
             {props.rows.map((row: RowData, index) => {
                 return (
                     <React.Fragment key={row.title}>
-                        <ListItem alignItems="flex-start" button selected={props.selectedIndex === index} onClick={(event) => handleListItemClick(event, index)}>
+                        <ListItem id={`listItem#${index}`} alignItems="flex-start" button selected={props.selectedIndex === index} onClick={(event) => handleListItemClick(event, index)}>
                             <ListItemAvatar>
                                 <Avatar alt={row.title} src={row.thumbnail} variant="rounded" className={classes.large} />
                             </ListItemAvatar>

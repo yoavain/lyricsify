@@ -10,7 +10,7 @@ import FileListPanel from "./FileListPanel";
 import SelectFolderButton from "./SelectFolderButton";
 import LyricsCard from "./LyricsCard";
 import { folderParser } from "../../main/folderParser";
-import { RowData } from "../../main/staticData";
+import { RowData } from "../../../test/resources/staticData";
 
 const themeOptions: ThemeOptions = {
     palette: {
@@ -42,25 +42,37 @@ const useDarkTheme = (): [ThemeOptions, () => void] => {
     return [theme, toggleDarkMode];
 };
 
-const onSelectDir =(dir: string, setDir: (dir: string) => void, setInit: (init: boolean) => void): void => {
-    setDir(dir);
-    setInit(false);
-};
-
+enum Loading {
+    NOT_LOADED = "NotLoaded",
+    LOADING = "Loading",
+    LOADED = "Loaded"
+}
 
 const Application = () => {
     const [theme, toggleDarkMode] = useDarkTheme();
     const themeConfig: Theme = createMuiTheme(theme);
-    const [init, setInit] = useState(false);
+    const [init, setInit] = useState(Loading.NOT_LOADED);
     const [dir, setDir] = useState("");
-    const [selectedIndex, setSelectedIndex] = React.useState(-1);
-    const [rows, setRows] = React.useState<RowData[]>([]);
+    const [selectedIndex, setSelectedIndex] = useState(-1);
+    const [rows, setRows] = useState<RowData[]>([]);
 
-    if (!init && dir) {
+    if (init === Loading.NOT_LOADED && dir) {
+        setInit(Loading.LOADING);
         folderParser(dir)
             .then((rows: RowData[]) => setRows(rows))
-            .finally(() => setInit(true));
+            .finally(() => setInit(Loading.LOADED));
     }
+
+    const onSelectDir =(dir: string): void => {
+        setInit(Loading.LOADING);
+        // restore defaults
+        setSelectedIndex(-1);
+        setRows([]);
+        // set dir
+        setDir(dir);
+        // set init to false
+        setInit(Loading.NOT_LOADED);
+    };
 
     return (
         <MuiThemeProvider theme={themeConfig}>
@@ -68,7 +80,7 @@ const Application = () => {
                 <Grid container spacing={1}>
                     <AppBar position="static">
                         <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
-                        <SelectFolderButton dir={dir} onSelectDir={(dir) => onSelectDir(dir, setDir, setInit)}/>
+                        <SelectFolderButton dir={dir} onSelectDir={(dir) => onSelectDir(dir)}/>
                     </AppBar>
                 </Grid>
                 <Grid container spacing={1}>
