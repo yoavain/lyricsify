@@ -1,4 +1,4 @@
-import { RowData } from "./staticData";
+import { RowData } from "../../test/resources/staticData";
 import { Dirent, promises as fs } from "fs";
 import * as MusicMetadata from "music-metadata";
 import { IAudioMetadata, IPicture, ITag } from "music-metadata";

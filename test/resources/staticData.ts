@@ -1,4 +1,4 @@
-import cover from "../renderer/resources/cover.jpg";
+import cover from "../../src/renderer/resources/cover.jpg";
 
 export interface RowData {
     filename: string;

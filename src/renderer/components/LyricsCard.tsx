@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
-import SelectFolderButton from "./SelectFolderButton";
 
 interface LyricsCardProps {
     title?: string;
@@ -8,7 +7,11 @@ interface LyricsCardProps {
     lyrics?: string;
 }
 
-const prepareLyrics = (lyrics: string) => {
+const prepareLyrics = (lyrics: string | undefined) => {
+    if (!lyrics) {
+        return <div>[Missing Lyrics]</div>;
+    }
+
     return lyrics.split("\n").map((line, index) => <div key={index}>{line}</div>);
 };
 

@@ -1,11 +1,20 @@
 import * as React from "react";
-import * as renderer from "react-test-renderer";
+import { create, act, ReactTestRenderer } from "react-test-renderer";
 import FileListPanel from "../../../src/renderer/components/FileListPanel";
-import { rows } from "../../../src/main/staticData";
+import { rows } from "../../resources/staticData";
 
 describe("FileListPanel component", () => {
     it("renders correctly", () => {
-        const tree = renderer.create(<FileListPanel rows={rows}/>).toJSON();
-        expect(tree).toMatchSnapshot();
+        let root: ReactTestRenderer | undefined;
+        act(() => {
+            root = create(<FileListPanel rows={rows} onSelectItemClick={() => {}} selectedIndex={-1}/>);
+        });
+
+        expect(root?.toJSON()).toMatchSnapshot();
+
+        act(() => {
+            root?.update(<FileListPanel rows={rows} onSelectItemClick={() => {}} selectedIndex={0}/>);
+        });
+        expect(root?.toJSON()).toMatchSnapshot();
     });
 });
