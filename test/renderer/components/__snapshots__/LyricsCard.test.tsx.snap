@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LyricsCard component renders correctly 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <div
+    className="MuiCardContent-root"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h4"
+    >
+       - Lyrics
+    </h2>
+    <h2
+      className="MuiTypography-root MuiTypography-h5"
+    />
+    <h2
+      className="MuiTypography-root MuiTypography-h6"
+    >
+      <div>
+        [Missing Lyrics]
+      </div>
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`LyricsCard component renders correctly 2`] = `
+<div
+  className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <div
+    className="MuiCardContent-root"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h4"
+    >
+      Title
+       - Lyrics
+    </h2>
+    <h2
+      className="MuiTypography-root MuiTypography-h5"
+    >
+      Artist
+    </h2>
+    <h2
+      className="MuiTypography-root MuiTypography-h6"
+    >
+      <div>
+        These are the lyrics
+      </div>
+    </h2>
+  </div>
+</div>
+`;
