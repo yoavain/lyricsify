@@ -86,7 +86,7 @@
         "lint-staged": "10.0.8",
         "node-sass": "4.13.1",
         "prettier": "1.19.1",
-        "react-hot-loader": "4.12.19",
+        "react-hot-loader": "4.12.20",
         "react-test-renderer": "16.13.0",
         "sass-loader": "8.0.2",
         "source-map-loader": "0.2.4",
