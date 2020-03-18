@@ -40,6 +40,7 @@ const FileListPanel = (props: FileListPanelProps) => {
         props.onSelectItemClick(index);
     };
 
+    console.log(`Rendering FileListPanel ${JSON.stringify({ ...props, rows: props.rows.length })}`);
     return (
         <List className={classes.root}>
             {props.rows.map((row: RowData, index) => {

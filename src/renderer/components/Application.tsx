@@ -74,13 +74,20 @@ const Application = () => {
         setInit(Loading.NOT_LOADED);
     };
 
+    console.log("Rendering Application" + JSON.stringify({ theme: theme?.palette?.type, init, dir, selectedIndex, rows: rows.length }));
     return (
         <MuiThemeProvider theme={themeConfig}>
             <div>
                 <Grid container spacing={1}>
                     <AppBar position="static">
-                        <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
-                        <SelectFolderButton dir={dir} onSelectDir={(dir) => onSelectDir(dir)}/>
+                        <Grid container direction="row" justify="space-between" alignItems="center">
+                            <Grid item xs>
+                                <SelectFolderButton dir={dir} onSelectDir={(dir) => onSelectDir(dir)}/>
+                            </Grid>
+                            <Grid item>
+                                <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
+                            </Grid>
+                        </Grid>
                     </AppBar>
                 </Grid>
                 <Grid container spacing={1}>

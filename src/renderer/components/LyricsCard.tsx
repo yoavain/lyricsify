@@ -16,6 +16,7 @@ const prepareLyrics = (lyrics: string | undefined) => {
 };
 
 const LyricsCard = (props: LyricsCardProps) => {
+    console.log(`Rendering LyricsCard ${JSON.stringify({ ...props, lyrics: !!props.lyrics })}`);
     return (
         <Card>
             <CardContent>

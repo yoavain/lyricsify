@@ -1,6 +1,8 @@
-import { remote, BrowserWindow, OpenDialogOptions } from "electron";
-const { dialog } = require("electron").remote;
+import { BrowserWindow, OpenDialogOptions, remote } from "electron";
 import * as React from "react";
+import { Button } from "@material-ui/core";
+
+const { dialog } = require("electron").remote;
 
 interface SelectFolderButtonProps {
     dir: string;
@@ -24,11 +26,12 @@ const SelectFolderButton: React.FunctionComponent<SelectFolderButtonProps> = (pr
         });
     };
 
+    console.log(`Rendering SelectFolderButton ${JSON.stringify(props)}`);
     return (
         <div className="counter">
-            <button id="increment" onClick={selectFolder}>
+            <Button id="increment" variant="contained" color="secondary" onClick={selectFolder}>
                 {props.dir || "Select Directory"}
-            </button>
+            </Button>
         </div>
     );
 };
