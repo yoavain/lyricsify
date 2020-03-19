@@ -40,12 +40,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Happens To The Heart
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -102,12 +102,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Moving On
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -164,12 +164,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         The Night of Santiago
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -226,12 +226,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Thanks For The Dance
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -288,12 +288,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         It's Torn
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -350,12 +350,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         The Goal
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -412,12 +412,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Puppets
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -474,12 +474,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         The Hills
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -536,12 +536,12 @@ exports[`FileListPanel component renders correctly 1`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Listen To The Hummingbird
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -605,12 +605,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Happens To The Heart
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -667,12 +667,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Moving On
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -729,12 +729,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         The Night of Santiago
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -791,12 +791,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Thanks For The Dance
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -853,12 +853,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         It's Torn
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -915,12 +915,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         The Goal
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -977,12 +977,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Puppets
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -1039,12 +1039,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         The Hills
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
@@ -1101,12 +1101,12 @@ exports[`FileListPanel component renders correctly 2`] = `
       className="MuiListItemText-root MuiListItemText-multiline"
     >
       <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
       >
         Listen To The Hummingbird
       </span>
       <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
       >
         <span
           className="MuiTypography-root makeStyles-inline-2 MuiTypography-body2 MuiTypography-colorTextPrimary"
