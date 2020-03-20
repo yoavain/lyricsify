@@ -1,13 +1,5 @@
 import * as React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import { createStyles, Theme } from "@material-ui/core";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar";
-import ListItemText from "@material-ui/core/ListItemText";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+import { Avatar, createStyles, Divider, List, ListItem, ListItemAvatar, ListItemText, makeStyles, Theme, Typography } from "@material-ui/core";
 import { RowData } from "../../../test/resources/staticData";
 
 const useStyles = makeStyles((theme: Theme) =>

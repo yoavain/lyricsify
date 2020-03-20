@@ -1,6 +1,6 @@
-import { BrowserWindow, OpenDialogOptions, remote } from "electron";
 import * as React from "react";
 import { Button } from "@material-ui/core";
+import { BrowserWindow, OpenDialogOptions, remote } from "electron";
 
 const { dialog } = require("electron").remote;
 
