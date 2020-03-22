@@ -42,7 +42,7 @@
         "deep-diff": "1.0.2",
         "moment": "2.24.0",
         "music-metadata": "6.3.6",
-        "node-id3": "0.1.15",
+        "node-id3": "0.1.16",
         "numeral": "2.0.6",
         "react": "16.13.1",
         "react-dom": "16.13.1",
