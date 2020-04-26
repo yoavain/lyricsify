@@ -2,7 +2,7 @@ import * as fs from "fs";
 import { diff } from "deep-diff";
 import * as NodeID3 from "node-id3";
 
-export function addLyrics(inFile: string, outFile: string, lyrics: string) {
+export const addLyrics = (inFile: string, outFile: string, lyrics: string) => {
     const tags = NodeID3.read(inFile);
     const updatedTags = {
         ...tags,
@@ -23,6 +23,6 @@ export function addLyrics(inFile: string, outFile: string, lyrics: string) {
 
     const diffData = diff(updatedTags, validationTags);
     console.log(JSON.stringify(diffData, null, "\t"));
-}
+};
 
 addLyrics("D:\\Music_TEMP\\test.mp3", "D:\\Music_TEMP\\test.out.mp3", "these are the lyrics\nNothing more");
