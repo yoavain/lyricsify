@@ -75,7 +75,7 @@
         "concurrently": "5.2.0",
         "cross-env": "7.0.2",
         "css-loader": "3.5.3",
-        "electron": "9.0.0-beta.19",
+        "electron": "9.0.0-beta.21",
         "electron-builder": "22.5.1",
         "eslint": "6.8.0",
         "eslint-plugin-import": "2.20.2",
