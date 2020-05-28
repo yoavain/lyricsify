@@ -12,7 +12,7 @@
         "start-dev": "concurrently \"npm run start-renderer-dev\" \"npm run start-main-dev\"",
         "prestart": "npm run build",
         "start": "electron .",
-        "eslint": "eslint src/ test/ --ext .ts,.tsx,.js",
+        "eslint": "eslint src/ test/",
         "eslint:fix": "npm run eslint -- --fix",
         "test": "jest --coverage '(\\/test\\/(?!e2e/)).*'",
         "pretest:e2e": "npm run build",
