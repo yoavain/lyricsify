@@ -465,7 +465,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
 <body>
   <div>
     <ul
-      class="MuiList-root makeStyles-root-84 MuiList-padding"
+      class="MuiList-root makeStyles-root-4 MuiList-padding"
     >
       <div
         aria-disabled="false"
@@ -478,7 +478,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="Happens To The Heart"
@@ -499,7 +499,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -528,7 +528,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="Moving On"
@@ -549,7 +549,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -578,7 +578,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="The Night of Santiago"
@@ -599,7 +599,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -628,7 +628,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="Thanks For The Dance"
@@ -649,7 +649,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -678,7 +678,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="It's Torn"
@@ -699,7 +699,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -728,7 +728,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="The Goal"
@@ -749,7 +749,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -778,7 +778,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="Puppets"
@@ -799,7 +799,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -828,7 +828,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="The Hills"
@@ -849,7 +849,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
@@ -878,7 +878,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
           class="MuiListItemAvatar-root MuiListItemAvatar-alignItemsFlexStart"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-86"
+            class="MuiAvatar-root MuiAvatar-rounded makeStyles-large-6"
           >
             <img
               alt="Listen To The Hummingbird"
@@ -899,7 +899,7 @@ exports[`FileListPanel component renders correctly - with selected 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
           >
             <span
-              class="MuiTypography-root makeStyles-inline-85 MuiTypography-body2 MuiTypography-colorTextPrimary"
+              class="MuiTypography-root makeStyles-inline-5 MuiTypography-body2 MuiTypography-colorTextPrimary"
             >
               Leonard Cohen
             </span>
