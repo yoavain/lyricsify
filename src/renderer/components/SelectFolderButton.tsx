@@ -2,7 +2,7 @@ import * as React from "react";
 import { Button } from "@material-ui/core";
 import { BrowserWindow, OpenDialogOptions, remote } from "electron";
 
-const { dialog } = require("electron").remote;
+const { dialog } = remote;
 
 interface SelectFolderButtonProps {
     dir: string;
