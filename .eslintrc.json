@@ -20,7 +20,7 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ["node", "@typescript-eslint", "react", "import", "jest"],
+    "plugins": ["node", "@typescript-eslint", "react", "import", "jest", "security"],
     "extends": [
         "eslint:recommended",
         "plugin:node/recommended",
@@ -28,7 +28,8 @@
         "plugin:import/warnings",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:security/recommended"
     ],
     "rules": {
         // code
