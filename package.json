@@ -40,7 +40,7 @@
     "dependencies": {
         "@material-ui/core": "4.10.2",
         "deep-diff": "1.0.2",
-        "moment": "2.26.0",
+        "moment": "2.27.0",
         "music-metadata": "6.4.0",
         "node-id3": "0.1.17",
         "numeral": "2.0.6",
