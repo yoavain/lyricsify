@@ -81,7 +81,7 @@
         "eslint-plugin-import": "2.22.0",
         "eslint-plugin-jest": "23.17.1",
         "eslint-plugin-node": "11.1.0",
-        "eslint-plugin-react": "7.20.0",
+        "eslint-plugin-react": "7.20.1",
         "eslint-plugin-security": "1.4.0",
         "file-loader": "6.0.0",
         "fork-ts-checker-webpack-plugin": "4.1.6",
