@@ -79,7 +79,7 @@
         "electron-builder": "22.7.0",
         "eslint": "7.4.0",
         "eslint-plugin-import": "2.22.0",
-        "eslint-plugin-jest": "23.17.1",
+        "eslint-plugin-jest": "23.18.0",
         "eslint-plugin-node": "11.1.0",
         "eslint-plugin-react": "7.20.3",
         "eslint-plugin-security": "1.4.0",
