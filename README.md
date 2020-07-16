@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/yoavain/lyricsify/branch/master/graph/badge.svg)](https://codecov.io/gh/yoavain/lyricsify)
 # lyricsify
 
 ### Frameworks
