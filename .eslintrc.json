@@ -11,7 +11,7 @@
     },
     "overrides": [
         {
-            "files": "*.js,*.ts"
+            "files": "*.js,*.ts,*.jsx,*.tsx"
         }
     ],
     "parser": "@typescript-eslint/parser",
