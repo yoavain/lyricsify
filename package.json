@@ -19,7 +19,8 @@
         "test:e2e": "jest '(\\/test\\/e2e/).*'",
         "pack": "npm run build && electron-builder --dir",
         "dist": "npm run build && electron-builder",
-        "postinstall": "electron-builder install-app-deps"
+        "postinstall": "electron-builder install-app-deps",
+        "lyricsService": "ts-node ./src/main/lyricsService.ts"
     },
     "keywords": [
         "Electron",
@@ -41,6 +42,7 @@
         "@babel/runtime": "7.10.5",
         "@material-ui/core": "4.11.0",
         "deep-diff": "1.0.2",
+        "got": "11.5.1",
         "moment": "2.27.0",
         "music-metadata": "7.0.0",
         "node-id3": "0.1.17",
