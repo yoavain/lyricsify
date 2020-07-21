@@ -1,5 +1,5 @@
 import * as React from "react";
-import LyricsCard from "../../../src/renderer/components/LyricsCard";
+import LyricsCard from "~components/LyricsCard";
 import { render } from "@testing-library/react";
 
 describe("LyricsCard component", () => {

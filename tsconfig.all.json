@@ -20,8 +20,12 @@
     "baseUrl": ".",
     "noEmit": true,
     "paths": {
+      "~src/*": ["src/*"],
+      "~components/*": ["src/renderer/components/*"],
+      "~resources/*": ["resources/*"],
       "*": ["node_modules/*"]
     },
+
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
