@@ -1,5 +1,5 @@
-import { getLyrics } from "../../src/main/apiseedsLyricsService";
-import { LyricsResult } from "../../src/main/lyricsServiceIfc";
+import { getLyrics } from "../../../../src/main/lyrics/providers/apiseedsLyricsService";
+import { LyricsResult } from "../../../../src/main/lyrics/lyricsServiceIfc";
 
 describe("Test apiseedsLyricsService", () => {
     it("test apiseeds", async () => {
@@ -16,8 +16,6 @@ describe("Test apiseedsLyricsService", () => {
     })
     it("test apiseeds - miss", async () => {
         const result: LyricsResult = await getLyrics("The Beatles", "Yellow Su");
-        expect(result.result.similarity).toBeLessThanOrEqual(1)
-        expect(result.result.probability).toBeLessThanOrEqual(100)
-        expect(result.result.track.text).toBeTruthy()
+        expect(result).toBeUndefined();
     })
 })
