@@ -47,6 +47,7 @@
         "music-metadata": "7.0.0",
         "node-id3": "0.1.17",
         "numeral": "2.0.6",
+        "p-limit": "3.0.2",
         "react": "16.13.1",
         "react-dom": "16.13.1",
         "react-player": "2.6.0"
