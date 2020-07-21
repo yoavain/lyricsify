@@ -1,5 +1,6 @@
 import { development } from "../../../knexfile";
 import knex from "knex";
+import { LyricsResult } from "~src/main/lyrics/lyricsServiceIfc";
 
 const schema = "main";
 const lyricsTable = "lyrics";
@@ -8,7 +9,7 @@ const lyricsColumn = "lyrics";
 const knexClient = knex(development);
 
 const upsert = <T>(tableName: string, data: T) => {
-    const wrap = (key: string): string => `"${key}"`;
+    const wrap = (key: string): string => `"${key.replace(/"/g, "\"\"")}"`;
     return knexClient.raw("INSERT OR REPLACE INTO " +
         tableName +
         " (" + Object.keys(data).map(wrap).join(", ") +
@@ -22,7 +23,7 @@ type LyricsRow = {
     lyrics: string
 }
 
-export const getLyricsFromDb = async (artist: string, track: string): Promise<string> => {
+export const getLyricsFromDb = async (artist: string, track: string): Promise<LyricsResult> => {
     return knexClient
         .withSchema(schema)
         .select<LyricsRow[]>(lyricsColumn)
@@ -30,25 +31,20 @@ export const getLyricsFromDb = async (artist: string, track: string): Promise<st
         .from<LyricsRow>(lyricsTable)
         .then((result: LyricsRow[]) => {
             if (result?.length === 1) {
-                return result[0].lyrics;
+                return JSON.parse(result[0].lyrics) as LyricsResult;
             }
         });
 
 };
 
-export const putLyricsInDb = async (artist: string, track: string, lyrics: string): Promise<void> => {
-    return upsert<LyricsRow>(lyricsTable, { artist, track, lyrics });
+export const putLyricsInDb = async (artist: string, track: string, lyrics: LyricsResult): Promise<void> => {
+    return upsert<LyricsRow>(lyricsTable, { artist, track, lyrics: JSON.stringify(lyrics) });
 };
 
-const main = async () => {
-    const l1: string = await getLyricsFromDb("a", "b");
-    console.log(l1);
-    
-    await putLyricsInDb("a", "b", Math.random().toString());
-    
-    const l2: string = await getLyricsFromDb("a", "b");
-    console.log(l2);
+export const deleteLyricsFromDb = async (artist: string, track: string): Promise<void> => {
+    return knexClient
+        .withSchema(schema)
+        .where({ artist, track })
+        .from<LyricsRow>(lyricsTable)
+        .del();
 };
-
-main()
-    .then(() => console.log("Done"));
