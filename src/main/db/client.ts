@@ -4,7 +4,6 @@ import { LyricsResult } from "~src/main/lyrics/lyricsServiceIfc";
 
 const schema = "main";
 const lyricsTable = "lyrics";
-const lyricsColumn = "lyrics";
 
 const knexClient = knex(development);
 
@@ -20,13 +19,13 @@ const upsert = <T>(tableName: string, data: T) => {
 type LyricsRow = {
     artist: string,
     track: string,
-    lyrics: string
+    lyrics: string  // JSON.stringify of LyricsResult
 }
 
 export const getLyricsFromDb = async (artist: string, track: string): Promise<LyricsResult> => {
     return knexClient
         .withSchema(schema)
-        .select<LyricsRow[]>(lyricsColumn)
+        .select<LyricsRow[]>("*")
         .where({ artist, track })
         .from<LyricsRow>(lyricsTable)
         .then((result: LyricsRow[]) => {
