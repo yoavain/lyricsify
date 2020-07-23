@@ -1,11 +1,9 @@
 import { GetLyricsService, LyricsResult } from "~src/main/lyrics/lyricsServiceIfc";
 import got from "got";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const tokens = require("../../../../tokens.json");
-
 const BASE_URL = "https://orion.apiseeds.com/api/music/lyric";
-const APISEEDS_KEY = process.env.APISEEDS_KEY || tokens.apiseeds;
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const APISEEDS_KEY = process.env.APISEEDS_KEY || require("../../../../tokens.json").apiseeds;
 
 
 const buildUrl = (artist: string, track: string): string => {
