@@ -8,6 +8,9 @@ module.exports = merge(baseConfig, {
     entry: {
         main: './src/main/main.ts'
     },
+    externals: {
+        sqlite3: 'commonjs sqlite3'
+    },
     module: {
         rules: [
             {

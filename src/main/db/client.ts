@@ -22,7 +22,7 @@ type LyricsRow = {
     lyrics: string  // JSON.stringify of LyricsResult
 }
 
-export const getLyricsFromDb = async (artist: string, track: string): Promise<LyricsResult> => {
+export const getLyricsFromDb = async (artist: string, track: string): Promise<LyricsResult | null> => {
     return knexClient
         .withSchema(schema)
         .select<LyricsRow[]>("*")
@@ -32,6 +32,10 @@ export const getLyricsFromDb = async (artist: string, track: string): Promise<Ly
             if (result?.length === 1) {
                 return JSON.parse(result[0].lyrics) as LyricsResult;
             }
+        })
+        .catch((err) => {
+            console.log(err);
+            return null;
         });
 
 };
