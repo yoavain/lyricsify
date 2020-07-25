@@ -11,14 +11,11 @@ module.exports = merge(baseConfig, {
         app: './src/renderer/app.tsx'
     },
     externals: {
+        knex: 'commonjs knex',
         sqlite3: 'commonjs sqlite3'
     },
     module: {
         rules: [
-            {
-                test: /\.node$/,
-                loader: 'node-loader'
-            },
             {
                 test: /node_modules[\/\\](iconv-lite)[\/\\].+/,
                 resolve: {
