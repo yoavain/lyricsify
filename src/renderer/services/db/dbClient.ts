@@ -1,11 +1,12 @@
-import { development } from "../../../../knexfile";
+import { test, development } from "../../../../knexfile";
 import knex from "knex";
 import { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 const schema = "main";
 const lyricsTable = "lyrics";
 
-const knexClient = knex(development);
+const testMode = process.env.TEST_MODE === "true";
+const knexClient = knex(testMode ? test : development);
 
 const upsert = <T>(tableName: string, data: T) => {
     const wrap = (key: string): string => `"${key.replace(/"/g, "\"\"")}"`;

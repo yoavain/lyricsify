@@ -1,4 +1,4 @@
-import { deleteLyricsFromDb, getLyricsFromDb, putLyricsInDb } from "~src/renderer/services/db/client";
+import { deleteLyricsFromDb, getLyricsFromDb, putLyricsInDb } from "~src/renderer/services/db/dbClient";
 import type { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 describe("Test db client", () => {

@@ -13,11 +13,13 @@ const buildUrl = (artist: string, track: string): string => {
 };
 
 export const getLyrics: GetLyricsService = async (artist: string, track: string): Promise<LyricsResult> => {
+    let result;
     try {
-        return got.get<LyricsResult>(buildUrl(artist, track)).json();
+        result = await got.get<LyricsResult>(buildUrl(artist, track)).json();
     }
     catch (e) {
         // do nothing
         console.log(e);
     }
+    return result;
 };

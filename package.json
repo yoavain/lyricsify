@@ -14,7 +14,7 @@
         "start": "electron .",
         "eslint": "eslint src/ test/",
         "eslint:fix": "npm run eslint -- --fix",
-        "test": "jest --coverage '(\\/test\\/(?!e2e/)).*'",
+        "test": "cross-env TEST_MODE=true jest --coverage '(\\/test\\/(?!e2e/)).*'",
         "pretest:e2e": "npm run build",
         "test:e2e": "jest '(\\/test\\/e2e/).*'",
         "pack": "npm run build && electron-builder --dir",
