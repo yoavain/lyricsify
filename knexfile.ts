@@ -4,7 +4,6 @@ import path from "path";
 import sqlite3 from "sqlite3";
 
 export const development: knex.Config = {
-    debug: true,
     client: "sqlite3",
     connection: {
         filename: path.join(__dirname, "dev.sqlite3")
