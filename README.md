@@ -1,15 +1,6 @@
 [![codecov](https://codecov.io/gh/yoavain/lyricsify/branch/master/graph/badge.svg)](https://codecov.io/gh/yoavain/lyricsify)
 # lyricsify
 
-### Frameworks
-
-[![React](docs/img/react.png)](https://reactjs.org/)
-[![Webpack](docs/img/webpack.png)](https://webpack.js.org/)
-[![TypeScript](docs/img/ts.png)](https://www.typescriptlang.org/)
-[![Electron](docs/img/electron.png)](https://electronjs.org/)
-[![Jest](docs/img/jest.png)](https://facebook.github.io/jest/)
-
-
 ## Install
 Clone the repository with Git:
 
