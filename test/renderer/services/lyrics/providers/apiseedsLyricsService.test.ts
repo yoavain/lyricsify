@@ -1,5 +1,5 @@
-import { getLyrics } from "~src/main/lyrics/providers/apiseedsLyricsService";
-import { LyricsResult } from "~src/main/lyrics/lyricsServiceIfc";
+import { getLyrics } from "~src/renderer/services/lyrics/providers/apiseedsLyricsService";
+import { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 describe("Test apiseedsLyricsService", () => {
     it("test apiseeds", async () => {

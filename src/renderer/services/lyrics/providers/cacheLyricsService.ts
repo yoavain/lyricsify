@@ -1,6 +1,6 @@
-import { GetLyricsService, LyricsResult } from "~src/main/lyrics/lyricsServiceIfc";
-import { getLyrics as apiseedsLyricsServiceGetLyrics } from "~src/main/lyrics/providers/apiseedsLyricsService";
-import { getLyricsFromDb, putLyricsInDb } from "~src/main/db/client";
+import { GetLyricsService, LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
+import { getLyrics as apiseedsLyricsServiceGetLyrics } from "~src/renderer/services/lyrics/providers/apiseedsLyricsService";
+import { getLyricsFromDb, putLyricsInDb } from "~src/renderer/services/db/client";
 
 const lyricsServices: GetLyricsService[] = [
     apiseedsLyricsServiceGetLyrics

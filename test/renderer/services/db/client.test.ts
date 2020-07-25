@@ -1,5 +1,5 @@
-import { LyricsResult } from "../../../src/main/lyrics/lyricsServiceIfc";
-import { deleteLyricsFromDb, getLyricsFromDb, putLyricsInDb } from "../../../src/main/db/client";
+import { deleteLyricsFromDb, getLyricsFromDb, putLyricsInDb } from "~src/renderer/services/db/client";
+import type { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 describe("Test db client", () => {
     it("Test client", async () => {

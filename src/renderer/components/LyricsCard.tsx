@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
-import { getLyrics } from "~src/main/lyrics/providers/cacheLyricsService";
-import { LyricsResult } from "~src/main/lyrics/lyricsServiceIfc";
+import { getLyrics } from "~src/renderer/services/lyrics/providers/cacheLyricsService";
+import { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 interface LyricsCardProps {
     title?: string;
