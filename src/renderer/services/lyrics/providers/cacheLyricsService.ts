@@ -26,6 +26,5 @@ export const getLyrics: GetLyricsService = async (artist: string, track: string)
     }
     catch (e) {
         // do nothing
-        console.log(e);
     }
 };

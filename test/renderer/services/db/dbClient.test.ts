@@ -1,7 +1,17 @@
-import { deleteLyricsFromDb, getLyricsFromDb, putLyricsInDb } from "~src/renderer/services/db/dbClient";
+import { deleteLyricsFromDb, getLyricsFromDb, knexClient, putLyricsInDb } from "~src/renderer/services/db/dbClient";
 import type { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 describe("Test db client", () => {
+    beforeAll(()=> {
+        // init in-memory db
+        return knexClient.migrate.latest();
+    });
+
+    afterAll(()=> {
+        // destroy in-memory db
+        return knexClient.migrate.rollback().then(() => knexClient.destroy());
+    })
+
     it("Test client", async () => {
         const artist = "artistName";
         const track = "trackName";

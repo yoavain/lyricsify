@@ -6,7 +6,7 @@ const schema = "main";
 const lyricsTable = "lyrics";
 
 const testMode = process.env.TEST_MODE === "true";
-const knexClient = knex(testMode ? test : development);
+export const knexClient = knex(testMode ? test : development);
 
 const upsert = <T>(tableName: string, data: T) => {
     const wrap = (key: string): string => `"${key.replace(/"/g, "\"\"")}"`;
@@ -35,7 +35,6 @@ export const getLyricsFromDb = async (artist: string, track: string): Promise<Ly
             }
         })
         .catch((err) => {
-            console.log(err);
             return null;
         });
 
