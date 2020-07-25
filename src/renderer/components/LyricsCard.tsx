@@ -1,5 +1,8 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
+import { getLyrics } from "~src/renderer/services/lyrics/providers/cacheLyricsService";
+import { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 interface LyricsCardProps {
     title?: string;
@@ -17,6 +20,20 @@ const prepareLyrics = (lyrics: string | undefined) => {
 
 const LyricsCard = (props: LyricsCardProps) => {
     console.log(`Rendering LyricsCard ${JSON.stringify({ ...props, lyrics: !!props.lyrics })}`);
+    const [internetLyrics, setInternetLyrics] = useState<string>("");
+    
+    useEffect(() => {
+        if (!props.lyrics) {
+            getLyrics(props.artist, props.title)
+                .then((lyricsResult: LyricsResult) => {
+                    const lyrics: string = lyricsResult?.result?.track?.text;
+                    if (lyrics) {
+                        setInternetLyrics(lyrics);
+                    }
+                });
+        }
+    }, [props.artist, props.title]);
+    
     return (
         <Card>
             <CardContent>
@@ -27,7 +44,7 @@ const LyricsCard = (props: LyricsCardProps) => {
                     {props.artist}
                 </Typography>
                 <Typography variant="h6" component="h2">
-                    {prepareLyrics(props.lyrics)}
+                    {prepareLyrics(props.lyrics || internetLyrics)}
                 </Typography>
             </CardContent>
         </Card>

@@ -2,10 +2,10 @@ import * as React from "react";
 import { useState } from "react";
 import { AppBar, createMuiTheme, FormControlLabel, Grid, MuiThemeProvider, Switch, Theme, ThemeOptions } from "@material-ui/core";
 import { hot } from "react-hot-loader/root";
-import FileListPanel from "./FileListPanel";
-import SelectFolderButton from "./SelectFolderButton";
-import LyricsCard from "./LyricsCard";
-import { folderParser } from "../../main/folderParser";
+import FileListPanel from "~components/FileListPanel";
+import SelectFolderButton from "~components/SelectFolderButton";
+import LyricsCard from "~components/LyricsCard";
+import { folderParser } from "~src/main/folderParser";
 import { RowData } from "../../../test/resources/staticData";
 import type { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import ReactPlayer from "react-player";
@@ -79,6 +79,7 @@ const Application = () => {
     };
 
     console.log("Rendering Application" + JSON.stringify({ theme: theme?.palette?.type, init, dir, selectedIndex, rows: rows.length }));
+    const selectedRow: RowData = rows[selectedIndex];
     return (
         <MuiThemeProvider theme={themeConfig}>
             <div>
@@ -92,12 +93,12 @@ const Application = () => {
                                 {selectedIndex > -1 &&
                                     <ReactPlayer
                                         className='react-player'
-                                        url={rows[selectedIndex].path}
+                                        url={selectedRow.path}
                                         controls={true}
                                         width='350px'
                                         height='35px'
                                         style={{ color: `${theme?.palette?.secondary}` }}
-                                        playIcon={rows[selectedIndex].thumbnail}
+                                        playIcon={selectedRow.thumbnail}
                                         playing={playing}
                                         onPlay={() => setPlaying(true)}
                                         onPause={() => setPlaying(false)}
@@ -116,7 +117,7 @@ const Application = () => {
                     </Grid>
                     <Grid item xs>
                         { selectedIndex >= 0 &&
-                        <LyricsCard title={rows[selectedIndex].title} artist={rows[selectedIndex].artist} lyrics={rows[selectedIndex].lyrics}/>
+                        <LyricsCard title={selectedRow.title} artist={selectedRow.artist} lyrics={selectedRow.lyrics}/>
                         }
                     </Grid>
                 </Grid>

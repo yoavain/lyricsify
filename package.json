@@ -14,12 +14,14 @@
         "start": "electron .",
         "eslint": "eslint src/ test/",
         "eslint:fix": "npm run eslint -- --fix",
-        "test": "jest --coverage '(\\/test\\/(?!e2e/)).*'",
+        "test": "cross-env TEST_MODE=true jest --coverage '(\\/test\\/(?!e2e/)).*'",
         "pretest:e2e": "npm run build",
         "test:e2e": "jest '(\\/test\\/e2e/).*'",
         "pack": "npm run build && electron-builder --dir",
         "dist": "npm run build && electron-builder",
-        "postinstall": "electron-builder install-app-deps"
+        "postinstall": "electron-builder install-app-deps",
+        "db": "ts-node src/renderer/services/db/client.ts",
+        "db-init": "knex migrate:down && knex migrate:latest"
     },
     "keywords": [
         "Electron",
@@ -41,13 +43,17 @@
         "@babel/runtime": "7.10.5",
         "@material-ui/core": "4.11.0",
         "deep-diff": "1.0.2",
+        "got": "11.5.1",
+        "knex": "0.21.2",
         "moment": "2.27.0",
         "music-metadata": "7.0.0",
         "node-id3": "0.1.17",
         "numeral": "2.0.6",
+        "p-limit": "3.0.2",
         "react": "16.13.1",
         "react-dom": "16.13.1",
-        "react-player": "2.6.0"
+        "react-player": "2.6.0",
+        "sqlite3": "5.0.0"
     },
     "devDependencies": {
         "@hot-loader/react-dom": "16.13.0",
@@ -67,6 +73,7 @@
         "@typescript-eslint/eslint-plugin": "3.7.0",
         "@typescript-eslint/parser": "3.7.0",
         "concurrently": "5.2.0",
+        "copy-webpack-plugin": "6.0.3",
         "cross-env": "7.0.2",
         "css-loader": "4.0.0",
         "electron": "9.1.1",
@@ -82,6 +89,7 @@
         "husky": "4.2.5",
         "jest": "26.1.0",
         "lint-staged": "10.2.11",
+        "node-loader": "1.0.0",
         "node-sass": "4.14.1",
         "prettier": "2.0.5",
         "react-hot-loader": "4.12.21",

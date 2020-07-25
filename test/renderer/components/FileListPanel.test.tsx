@@ -1,5 +1,5 @@
 import * as React from "react";
-import FileListPanel from "../../../src/renderer/components/FileListPanel";
+import FileListPanel from "~components/FileListPanel";
 import { rows } from "../../resources/staticData";
 import { render } from "@testing-library/react";
 

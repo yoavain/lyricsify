@@ -35,6 +35,7 @@ jobs:
       run: npm run build
       env:
         CI: true
+        APISEEDS_KEY: ${{ secrets.APISEEDS_KEY }}
 
     - name: Codecov
       uses: codecov/codecov-action@v1.0.10
