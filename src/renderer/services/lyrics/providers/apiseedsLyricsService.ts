@@ -13,6 +13,9 @@ const buildUrl = (artist: string, track: string): string => {
 };
 
 export const getLyrics: GetLyricsService = async (artist: string, track: string): Promise<LyricsResult> => {
+    if (!APISEEDS_KEY) {
+        throw new Error("No API KEY");
+    }
     let result;
     try {
         result = await got.get<LyricsResult>(buildUrl(artist, track)).json();
