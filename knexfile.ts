@@ -12,7 +12,6 @@ export const development: knex.Config = {
 };
 
 export const test: knex.Config = {
-    debug: true,
     client: "sqlite3",
     connection: {
         filename: ":memory:"
