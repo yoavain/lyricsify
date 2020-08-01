@@ -6,7 +6,7 @@ import FileListPanel from "~components/FileListPanel";
 import SelectFolderButton from "~components/SelectFolderButton";
 import LyricsCard from "~components/LyricsCard";
 import { folderParser } from "~src/main/folderParser";
-import { RowData } from "../../../test/resources/staticData";
+import { RowData } from "~components/FileRow";
 import type { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import ReactPlayer from "react-player";
 
@@ -80,6 +80,10 @@ const Application = () => {
 
     console.log("Rendering Application" + JSON.stringify({ theme: theme?.palette?.type, init, dir, selectedIndex, rows: rows.length }));
     const selectedRow: RowData = rows[selectedIndex];
+    const internetLyricsSetter = (selectedIndex: number, lyrics: string) => {
+        rows[selectedIndex].internetLyrics = lyrics;
+    };
+
     return (
         <MuiThemeProvider theme={themeConfig}>
             <div>
@@ -117,7 +121,12 @@ const Application = () => {
                     </Grid>
                     <Grid item xs>
                         { selectedIndex >= 0 &&
-                        <LyricsCard title={selectedRow.title} artist={selectedRow.artist} lyrics={selectedRow.lyrics}/>
+                        <LyricsCard
+                            title={selectedRow.title}
+                            artist={selectedRow.artist}
+                            lyrics={selectedRow.lyrics}
+                            gotLyricsFromInternetCallback={(lyrics) => internetLyricsSetter(selectedIndex, lyrics)}
+                        />
                         }
                     </Grid>
                 </Grid>
