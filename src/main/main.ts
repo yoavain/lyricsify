@@ -6,6 +6,7 @@ let mainWindow: BrowserWindow | null;
 
 const createWindow = async () => {
     mainWindow = new BrowserWindow({
+        title: "Lyricsify",
         width: 800,
         height: 600,
         webPreferences: {
@@ -25,6 +26,10 @@ const createWindow = async () => {
         mainWindow!.webContents.openDevTools();
     }
 
+    mainWindow.on("page-title-updated", (e) => {
+        e.preventDefault();
+    });
+    
     mainWindow.on("closed", () => {
         mainWindow = null;
     });
