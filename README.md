@@ -1,5 +1,13 @@
-[![codecov](https://codecov.io/gh/yoavain/lyricsify/branch/master/graph/badge.svg)](https://codecov.io/gh/yoavain/lyricsify)
-# lyricsify
+[![Actions Status](https://github.com/yoavain/lyricsify/workflows/Node%20CI/badge.svg)](https://github.com/yoavain/lyricsify/actions) ![types](https://img.shields.io/npm/types/typescript.svg) ![commit](https://img.shields.io/github/last-commit/yoavain/lyricsify.svg) [![Known Vulnerabilities](https://snyk.io//test/github/yoavain/lyricsify/badge.svg?targetFile=package.json)](https://snyk.io//test/github/yoavain/lyricsify?targetFile=package.json) [![codecov](https://codecov.io/gh/yoavain/lyricsify/branch/master/graph/badge.svg)](https://codecov.io/gh/yoavain/lyricsify) ![renovate](https://badges.renovateapi.com/github/yoavain/lyricsify) ![visitors](https://visitor-badge.glitch.me/badge?page_id=yoavain.lyricsify)
+# Lyricsify -  Player & lyrics
+
+This is an audio player, that:
+1. Parses and shows lyrics embedded in files
+2. Fetches missing lyrics from various lyrics providers
+3. (Optionally) embeds lyrics in file
+
+Lyrics providers:
+1. apiseeds.com (requires API token)   
 
 ## Install
 Clone the repository with Git:
@@ -45,17 +53,3 @@ You can make builds for specific platforms (or multiple platforms) by using the 
 ```bash
 npm run dist -- -mwl
 ```
-
-## Husky and Prettier
-This project comes with both Husky and Prettier setup to ensure a consistent code style. 
-
-To change the code style, you can change the configuration in `.prettierrc`. 
-
-In case you want to get rid of this, you can removing the following from `package.json`:
-
-1. Remove `precommit` from the `scripts` section
-1. Remove the `lint-staged` section
-1. Remove `lint-staged`, `prettier`, `tslint-config-prettier`, and `husky` from the `devDependencies`
-
-Also remove `tslint-config-prettier` from the `extends` section in `tslint.json`.
-

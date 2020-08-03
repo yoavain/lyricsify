@@ -8,6 +8,7 @@ interface LyricsCardProps {
     title?: string;
     artist?: string;
     lyrics?: string;
+    gotLyricsFromInternetCallback?: (lyrics: string) => void
 }
 
 const prepareLyrics = (lyrics: string | undefined) => {
@@ -19,32 +20,35 @@ const prepareLyrics = (lyrics: string | undefined) => {
 };
 
 const LyricsCard = (props: LyricsCardProps) => {
-    console.log(`Rendering LyricsCard ${JSON.stringify({ ...props, lyrics: !!props.lyrics })}`);
+    const { artist, title, lyrics, gotLyricsFromInternetCallback } = props;
     const [internetLyrics, setInternetLyrics] = useState<string>("");
     
     useEffect(() => {
-        if (!props.lyrics) {
-            getLyrics(props.artist, props.title)
+        if (!lyrics) {
+            getLyrics(artist, title)
                 .then((lyricsResult: LyricsResult) => {
                     const lyrics: string = lyricsResult?.result?.track?.text;
                     if (lyrics) {
                         setInternetLyrics(lyrics);
+                        if (typeof gotLyricsFromInternetCallback === "function") {
+                            gotLyricsFromInternetCallback(lyrics);
+                        }
                     }
                 });
         }
-    }, [props.artist, props.title]);
+    }, [artist, title]);
     
     return (
         <Card>
             <CardContent>
                 <Typography variant="h4" component="h2">
-                    {props.title} - Lyrics
+                    {title} - Lyrics
                 </Typography>
                 <Typography variant="h5" component="h2">
-                    {props.artist}
+                    {artist}
                 </Typography>
                 <Typography variant="h6" component="h2">
-                    {prepareLyrics(props.lyrics || internetLyrics)}
+                    {prepareLyrics(lyrics || internetLyrics)}
                 </Typography>
             </CardContent>
         </Card>

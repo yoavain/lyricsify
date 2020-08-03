@@ -1,20 +1,5 @@
+import { RowData } from "~components/FileRow";
 import cover from "../../src/renderer/resources/cover.jpg";
-
-export interface RowData {
-    filename: string;
-    path: string;
-    tag?: string;
-    title?: string;
-    artist?: string;
-    album?: string;
-    track?: string | number;
-    year?: number;
-    length?: number;
-    size?: number;
-    lastModified?: number;
-    lyrics?: string;
-    thumbnail?: string;
-}
 
 export const rows: RowData[] = [
     {
