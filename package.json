@@ -58,7 +58,7 @@
     },
     "devDependencies": {
         "@hot-loader/react-dom": "16.13.0",
-        "@testing-library/dom": "7.21.7",
+        "@testing-library/dom": "7.21.8",
         "@testing-library/jest-dom": "5.11.2",
         "@testing-library/react": "10.4.8",
         "@types/deep-diff": "1.0.0",
