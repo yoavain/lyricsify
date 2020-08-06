@@ -1,4 +1,5 @@
 import * as React from "react";
+import { FC } from "react";
 import { ClassNameMap } from "@material-ui/core/styles/withStyles";
 import { Avatar, Divider, IconButton, ListItem, ListItemAvatar, ListItemText, Typography } from "@material-ui/core";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
@@ -21,7 +22,7 @@ export interface RowData {
     thumbnail?: string;
 }
 
-interface FileRowProps {
+interface FilePanelProps {
     isSelected: boolean,
     isLast: boolean
     onClick: (event) => void,
@@ -31,11 +32,15 @@ interface FileRowProps {
 
 const useStyles = makeStyles(() => ({
     iconButton: {
-        colorPrimary: "orange"
+        width: "30px",
+        height: "30px",
+        colorPrimary: "orange",
+        backgroundColor: "orange"
     }
 }));
 
-const FileRow = (props: FileRowProps) => {
+
+const FilePanel: FC<FilePanelProps> = (props: FilePanelProps) => {
     const { row, isSelected, isLast, onClick } = props;
     const { artist, title, album, year, thumbnail, internetLyrics } = row;
     const classes = useStyles();
@@ -66,4 +71,4 @@ const FileRow = (props: FileRowProps) => {
     </React.Fragment>;
 };
 
-export default FileRow;
+export default FilePanel;
