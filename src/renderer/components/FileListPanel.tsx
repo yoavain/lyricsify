@@ -1,6 +1,7 @@
 import * as React from "react";
+import { FC } from "react";
 import { createStyles, List, makeStyles, Theme } from "@material-ui/core";
-import FileRow, { RowData } from "~components/FileRow";
+import FilePanel, { RowData } from "~components/FilePanel";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -25,7 +26,7 @@ interface FileListPanelProps {
     onSelectItemClick: (selectedIndex: number) => void;
 }
 
-const FileListPanel = (props: FileListPanelProps) => {
+const FileListPanel: FC<FileListPanelProps> = (props: FileListPanelProps) => {
     const classes = useStyles();
     const { rows, selectedIndex } = props;
 
@@ -33,12 +34,11 @@ const FileListPanel = (props: FileListPanelProps) => {
         props.onSelectItemClick(index);
     };
 
-    console.log(`Rendering FileListPanel ${JSON.stringify({ ...props, rows: rows.length })}`);
     return (
         <List className={classes.root}>
             {rows.map((row: RowData, index) => {
                 return (
-                    <FileRow
+                    <FilePanel
                         key={index}
                         row={row}
                         isSelected={index === selectedIndex}

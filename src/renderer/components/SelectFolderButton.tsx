@@ -1,4 +1,5 @@
 import * as React from "react";
+import { FC } from "react";
 import { Button } from "@material-ui/core";
 import { BrowserWindow, OpenDialogOptions, remote } from "electron";
 
@@ -9,7 +10,7 @@ interface SelectFolderButtonProps {
     onSelectDir: (dir: string) => void;
 }
 
-const SelectFolderButton: React.FunctionComponent<SelectFolderButtonProps> = (props: SelectFolderButtonProps) => {
+const SelectFolderButton: FC<SelectFolderButtonProps> = (props: SelectFolderButtonProps) => {
     const selectDirectoryWindow = (): Promise<Electron.OpenDialogReturnValue> => {
         const mainWindow: BrowserWindow = remote.getCurrentWindow();
         if (mainWindow === null) {
@@ -26,7 +27,6 @@ const SelectFolderButton: React.FunctionComponent<SelectFolderButtonProps> = (pr
         });
     };
 
-    console.log(`Rendering SelectFolderButton ${JSON.stringify(props)}`);
     return (
         <div className="counter">
             <Button id="increment" variant="contained" color="secondary" onClick={selectFolder}>

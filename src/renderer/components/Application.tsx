@@ -6,7 +6,7 @@ import FileListPanel from "~components/FileListPanel";
 import SelectFolderButton from "~components/SelectFolderButton";
 import LyricsCard from "~components/LyricsCard";
 import { folderParser } from "~src/main/folderParser";
-import { RowData } from "~components/FileRow";
+import { RowData } from "~components/FilePanel";
 import type { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import ReactPlayer from "react-player";
 
@@ -78,10 +78,13 @@ const Application = () => {
         setPlaying(true);
     };
 
-    console.log("Rendering Application" + JSON.stringify({ theme: theme?.palette?.type, init, dir, selectedIndex, rows: rows.length }));
     const selectedRow: RowData = rows[selectedIndex];
     const internetLyricsSetter = (selectedIndex: number, lyrics: string) => {
-        rows[selectedIndex].internetLyrics = lyrics;
+        setRows([
+            ...rows.slice(0, selectedIndex),
+            { ...selectedRow, internetLyrics: lyrics },
+            ...rows.slice(selectedIndex + 1)
+        ]);
     };
 
     return (
