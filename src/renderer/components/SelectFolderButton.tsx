@@ -27,7 +27,6 @@ const SelectFolderButton: FC<SelectFolderButtonProps> = (props: SelectFolderButt
         });
     };
 
-    console.log(`Rendering SelectFolderButton ${JSON.stringify(props)}`);
     return (
         <div className="counter">
             <Button id="increment" variant="contained" color="secondary" onClick={selectFolder}>
