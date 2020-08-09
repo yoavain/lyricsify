@@ -47,7 +47,7 @@
         "got": "11.5.2",
         "knex": "0.21.3",
         "moment": "2.27.0",
-        "music-metadata": "7.0.0",
+        "music-metadata": "7.0.1",
         "node-id3": "0.1.18",
         "numeral": "2.0.6",
         "p-limit": "3.0.2",
