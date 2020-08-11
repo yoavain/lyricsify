@@ -127,7 +127,7 @@ const Application = () => {
                         <LyricsCard
                             title={selectedRow.title}
                             artist={selectedRow.artist}
-                            lyrics={selectedRow.lyrics}
+                            lyrics={selectedRow.lyrics || selectedRow.internetLyrics}
                             gotLyricsFromInternetCallback={(lyrics) => internetLyricsSetter(selectedIndex, lyrics)}
                         />
                         }

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import { getLyrics } from "~src/renderer/services/lyrics/providers/cacheLyricsService";
 import { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
@@ -21,15 +21,13 @@ const prepareLyrics = (lyrics: string | undefined) => {
 
 const LyricsCard: FC<LyricsCardProps> = (props: LyricsCardProps) => {
     const { artist, title, lyrics, gotLyricsFromInternetCallback } = props;
-    const [internetLyrics, setInternetLyrics] = useState<string>("");
-    
+
     useEffect(() => {
         if (!lyrics) {
             getLyrics(artist, title)
                 .then((lyricsResult: LyricsResult) => {
                     const lyrics: string = lyricsResult?.result?.track?.text;
                     if (lyrics) {
-                        setInternetLyrics(lyrics);
                         if (typeof gotLyricsFromInternetCallback === "function") {
                             gotLyricsFromInternetCallback(lyrics);
                         }
@@ -48,7 +46,7 @@ const LyricsCard: FC<LyricsCardProps> = (props: LyricsCardProps) => {
                     {artist}
                 </Typography>
                 <Typography variant="h6" component="h2">
-                    {prepareLyrics(lyrics || internetLyrics)}
+                    {prepareLyrics(lyrics)}
                 </Typography>
             </CardContent>
         </Card>
