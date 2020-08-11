@@ -1,5 +1,5 @@
 import { Application } from "spectron";
-import * as electronPath from "electron";
+const electronPath = require("electron");
 import * as path from "path";
 
 jest.setTimeout(20000);
@@ -9,8 +9,9 @@ describe("Main window", () => {
 
     beforeEach(() => {
         app = new Application({
-            path: electronPath.toString(),
-            args: [path.join(__dirname, "..", "..")]
+            path: electronPath,
+            args: [path.join(__dirname, "..", "..")],
+            startTimeout: 10000
         });
 
         return app.start();
@@ -29,27 +30,5 @@ describe("Main window", () => {
         const title = await browserWindow.getTitle();
 
         expect(title).toBe("Lyricsify");
-    });
-
-    it("increments the counter", async () => {
-        const { client } = app;
-
-        await client.waitUntilWindowLoaded();
-        await client.click("#increment");
-
-        const counterText = await client.getText("#counter-value");
-
-        expect(counterText).toBe("Current value: 1");
-    });
-
-    it("decrements the counter", async () => {
-        const { client } = app;
-
-        await client.waitUntilWindowLoaded();
-        await client.click("#decrement");
-
-        const counterText = await client.getText("#counter-value");
-
-        expect(counterText).toBe("Current value: -1");
     });
 });
