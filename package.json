@@ -1,6 +1,6 @@
 {
     "name": "lyricsify",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Batch download lyrics and embed in audio files",
     "main": "./dist/main.js",
     "scripts": {
@@ -51,8 +51,8 @@
         "node-id3": "0.1.18",
         "numeral": "2.0.6",
         "p-limit": "3.0.2",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
+        "react": "17.0.0-rc.1",
+        "react-dom": "17.0.0-rc.1",
         "react-player": "2.6.1",
         "sqlite3": "5.0.0"
     },
