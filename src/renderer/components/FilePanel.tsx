@@ -40,7 +40,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 
-const FilePanel: FC<FilePanelProps> = (props: FilePanelProps) => {
+const FilePanel: FC<FilePanelProps> = React.memo((props: FilePanelProps) => {
     const { row, isSelected, isLast, onClick } = props;
     const { artist, title, album, year, thumbnail, internetLyrics } = row;
     const classes = useStyles();
@@ -69,6 +69,6 @@ const FilePanel: FC<FilePanelProps> = (props: FilePanelProps) => {
         </ListItem>
         {!isLast && <Divider variant="inset" component="li"/>}
     </React.Fragment>;
-};
+});
 
 export default FilePanel;

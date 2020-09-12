@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AppBar, createMuiTheme, FormControlLabel, Grid, MuiThemeProvider, Switch, Theme, ThemeOptions } from "@material-ui/core";
 import { hot } from "react-hot-loader/root";
 import FileListPanel from "~components/FileListPanel";
@@ -40,37 +40,35 @@ const useDarkTheme = (): [ThemeOptions, () => void] => {
     return [theme, toggleDarkMode];
 };
 
-enum Loading {
-    NOT_LOADED = "NotLoaded",
-    LOADING = "Loading",
-    LOADED = "Loaded"
-}
-
 const Application = () => {
     const [theme, toggleDarkMode] = useDarkTheme();
-    const themeConfig: Theme = createMuiTheme(theme);
-    const [init, setInit] = useState(Loading.NOT_LOADED);
     const [dir, setDir] = useState("");
     const [selectedIndex, setSelectedIndex] = useState(-1);
+    const [selectedRow, setSelectedRow] = useState<RowData>(undefined);
     const [rows, setRows] = useState<RowData[]>([]);
     const [playing, setPlaying] = useState(false);
 
-    if (init === Loading.NOT_LOADED && dir) {
-        setInit(Loading.LOADING);
-        folderParser(dir)
-            .then((rows: RowData[]) => setRows(rows))
-            .finally(() => setInit(Loading.LOADED));
-    }
+    useEffect(() => {
+        if (dir) {
+            folderParser(dir)
+                .then((rows: RowData[]) => {
+                    setSelectedIndex(-1);
+                    setRows(rows);
+                });
+        }
+        else {
+            setRows([]);
+        }
+    }, [dir]);
+
+    useEffect(() => {
+        setSelectedRow(rows[selectedIndex]);
+    }, [rows, selectedIndex]);
+
+    const themeConfig: Theme = createMuiTheme(theme);
 
     const onSelectDir = (dir: string): void => {
-        setInit(Loading.LOADING);
-        // restore defaults
-        setSelectedIndex(-1);
-        setRows([]);
-        // set dir
         setDir(dir);
-        // set init to false
-        setInit(Loading.NOT_LOADED);
     };
 
     const onEnded = (): void => {
@@ -78,13 +76,14 @@ const Application = () => {
         setPlaying(true);
     };
 
-    const selectedRow: RowData = rows[selectedIndex];
     const internetLyricsSetter = (selectedIndex: number, lyrics: string) => {
-        setRows([
-            ...rows.slice(0, selectedIndex),
-            { ...selectedRow, internetLyrics: lyrics },
-            ...rows.slice(selectedIndex + 1)
-        ]);
+        if (selectedRow) {
+            setRows([
+                ...rows.slice(0, selectedIndex),
+                { ...selectedRow, internetLyrics: lyrics },
+                ...rows.slice(selectedIndex + 1)
+            ]);
+        }
     };
 
     return (
@@ -94,23 +93,23 @@ const Application = () => {
                     <AppBar position="static">
                         <Grid container direction="row" justify="space-between" alignItems="center">
                             <Grid item xs>
-                                <SelectFolderButton dir={dir} onSelectDir={(dir) => onSelectDir(dir)}/>
+                                <SelectFolderButton dir={dir} onSelectDir={onSelectDir}/>
                             </Grid>
                             <Grid item xs>
-                                {selectedIndex > -1 &&
-                                    <ReactPlayer
-                                        className='react-player'
-                                        url={selectedRow.path}
-                                        controls={true}
-                                        width='350px'
-                                        height='35px'
-                                        style={{ color: `${theme?.palette?.secondary}` }}
-                                        playIcon={selectedRow.thumbnail}
-                                        playing={playing}
-                                        onPlay={() => setPlaying(true)}
-                                        onPause={() => setPlaying(false)}
-                                        onEnded={onEnded}
-                                    />}
+                                {selectedRow &&
+                                <ReactPlayer
+                                    className='react-player'
+                                    url={selectedRow.path}
+                                    controls={true}
+                                    width='350px'
+                                    height='35px'
+                                    style={{ color: `${theme?.palette?.secondary}` }}
+                                    playIcon={selectedRow.thumbnail}
+                                    playing={playing}
+                                    onPlay={() => setPlaying(true)}
+                                    onPause={() => setPlaying(false)}
+                                    onEnded={onEnded}
+                                />}
                             </Grid>
                             <Grid item>
                                 <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
@@ -120,10 +119,10 @@ const Application = () => {
                 </Grid>
                 <Grid container spacing={1}>
                     <Grid item xs>
-                        {dir && <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/>}
+                        {rows.length > 0 && <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/>}
                     </Grid>
                     <Grid item xs>
-                        { selectedIndex >= 0 &&
+                        {selectedRow &&
                         <LyricsCard
                             title={selectedRow.title}
                             artist={selectedRow.artist}
