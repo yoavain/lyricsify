@@ -1,4 +1,12 @@
-[![Actions Status](https://github.com/yoavain/lyricsify/workflows/Node%20CI/badge.svg)](https://github.com/yoavain/lyricsify/actions) ![types](https://img.shields.io/npm/types/typescript.svg) ![commit](https://img.shields.io/github/last-commit/yoavain/lyricsify.svg) [![Known Vulnerabilities](https://snyk.io//test/github/yoavain/lyricsify/badge.svg?targetFile=package.json)](https://snyk.io//test/github/yoavain/lyricsify?targetFile=package.json) [![codecov](https://codecov.io/gh/yoavain/lyricsify/branch/master/graph/badge.svg)](https://codecov.io/gh/yoavain/lyricsify) ![renovate](https://badges.renovateapi.com/github/yoavain/lyricsify) ![visitors](https://visitor-badge.glitch.me/badge?page_id=yoavain.lyricsify)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/yoavain/lyricsify.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yoavain/lyricsify/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/yoavain/lyricsify.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yoavain/lyricsify/context:javascript)
+[![Actions Status](https://github.com/yoavain/lyricsify/workflows/Node%20CI/badge.svg)](https://github.com/yoavain/lyricsify/actions)
+![types](https://img.shields.io/npm/types/typescript.svg)
+![commit](https://img.shields.io/github/last-commit/yoavain/lyricsify.svg)
+[![Known Vulnerabilities](https://snyk.io//test/github/yoavain/lyricsify/badge.svg?targetFile=package.json)](https://snyk.io//test/github/yoavain/lyricsify?targetFile=package.json)
+[![codecov](https://codecov.io/gh/yoavain/lyricsify/branch/master/graph/badge.svg)](https://codecov.io/gh/yoavain/lyricsify)
+![renovate](https://badges.renovateapi.com/github/yoavain/lyricsify)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=yoavain.lyricsify)
 # Lyricsify -  Player & lyrics
 
 This is an audio player, that:
