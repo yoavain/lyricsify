@@ -45,7 +45,7 @@
         "@material-ui/icons": "4.9.1",
         "deep-diff": "1.0.2",
         "got": "11.7.0",
-        "knex": "0.21.5",
+        "knex": "0.21.6",
         "moment": "2.29.0",
         "music-metadata": "7.4.0",
         "node-id3": "0.1.19",
