@@ -1,4 +1,4 @@
-import { GetLyricsService, LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
+import type { GetLyricsService, LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 import got from "got";
 
 const BASE_URL = "https://orion.apiseeds.com/api/music/lyric";

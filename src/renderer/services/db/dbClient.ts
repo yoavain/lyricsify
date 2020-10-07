@@ -1,6 +1,6 @@
 import { test, development } from "../../../../knexfile";
 import knex from "knex";
-import { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
+import type { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 const schema = "main";
 const lyricsTable = "lyrics";

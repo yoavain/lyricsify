@@ -1,7 +1,8 @@
 import * as React from "react";
-import { FC } from "react";
+import type { FC } from "react";
 import { Button } from "@material-ui/core";
-import { BrowserWindow, OpenDialogOptions, remote } from "electron";
+import type { BrowserWindow, OpenDialogOptions } from "electron";
+import { remote } from "electron";
 
 const { dialog } = remote;
 

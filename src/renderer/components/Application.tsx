@@ -1,12 +1,13 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { AppBar, createMuiTheme, FormControlLabel, Grid, MuiThemeProvider, Switch, Theme, ThemeOptions } from "@material-ui/core";
+import type { Theme, ThemeOptions } from "@material-ui/core";
+import { AppBar, createMuiTheme, FormControlLabel, Grid, MuiThemeProvider, Switch } from "@material-ui/core";
 import { hot } from "react-hot-loader/root";
 import FileListPanel from "~components/FileListPanel";
 import SelectFolderButton from "~components/SelectFolderButton";
 import LyricsCard from "~components/LyricsCard";
 import { folderParser } from "~src/main/folderParser";
-import { RowData } from "~components/FilePanel";
+import type { RowData } from "~components/FilePanel";
 import type { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import ReactPlayer from "react-player";
 
