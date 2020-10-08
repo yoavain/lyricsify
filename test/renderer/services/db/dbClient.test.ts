@@ -2,20 +2,20 @@ import { deleteLyricsFromDb, getLyricsFromDb, knexClient, putLyricsInDb } from "
 import type { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 describe("Test db client", () => {
-    beforeAll(()=> {
+    beforeAll(() => {
         // init in-memory db
         return knexClient.migrate.latest();
     });
 
-    afterAll(()=> {
+    afterAll(() => {
         // destroy in-memory db
         return knexClient.migrate.rollback().then(() => knexClient.destroy());
-    })
+    });
 
     it("Test client", async () => {
         const artist = "artistName";
         const track = "trackName";
-        const lyrics = "123456"
+        const lyrics = "123456";
 
         await deleteLyricsFromDb(artist, track);
 
@@ -26,5 +26,5 @@ describe("Test db client", () => {
 
         const l2: LyricsResult = await getLyricsFromDb(artist, track);
         expect(l2).toEqual({ lyrics });
-    })
-})
+    });
+});

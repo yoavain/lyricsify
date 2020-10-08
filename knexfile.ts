@@ -1,7 +1,7 @@
-import knex from "knex";
 import path from "path";
+import type { Config } from "knex";
 
-export const development: knex.Config = {
+export const development: Config = {
     client: "sqlite3",
     connection: {
         filename: path.join(__dirname, "dev.sqlite3")
@@ -9,7 +9,7 @@ export const development: knex.Config = {
     useNullAsDefault: true
 };
 
-export const test: knex.Config = {
+export const test: Config = {
     client: "sqlite3",
     connection: {
         filename: ":memory:"

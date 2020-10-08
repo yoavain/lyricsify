@@ -1,24 +1,24 @@
-const mockGetLyrics = jest.fn((artist: string, track: string): string => `${artist} - ${track} - lyrics`)
+const mockGetLyrics = jest.fn((artist: string, track: string): string => `${artist} - ${track} - lyrics`);
 
 jest.mock("~src/renderer/services/lyrics/providers/apiseedsLyricsService", () => {
     return {
         getLyrics: mockGetLyrics
-    }
-})
+    };
+});
 
 import { getLyrics } from "~src/renderer/services/lyrics/providers/cacheLyricsService";
 import { knexClient } from "~src/renderer/services/db/dbClient";
 
 describe("test cache", () => {
-    beforeAll(()=> {
+    beforeAll(() => {
         // init in-memory db
         return knexClient.migrate.latest();
     });
 
-    afterAll(()=> {
+    afterAll(() => {
         // destroy in-memory db
         return knexClient.migrate.rollback().then(() => knexClient.destroy());
-    })
+    });
 
     it("Test cache", async () => {
         // Get 1st time
@@ -34,5 +34,5 @@ describe("test cache", () => {
         // expect hit
         expect(mockGetLyrics).toHaveBeenCalledTimes(1);
         expect(mockGetLyrics).toHaveBeenCalledWith("The Beatles", "Yellow Submarine");
-    })
-})
+    });
+});

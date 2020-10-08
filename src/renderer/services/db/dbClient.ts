@@ -1,6 +1,6 @@
 import { test, development } from "../../../../knexfile";
 import knex from "knex";
-import { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
+import type { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 
 const schema = "main";
 const lyricsTable = "lyrics";
@@ -34,7 +34,7 @@ export const getLyricsFromDb = async (artist: string, track: string): Promise<Ly
                 return JSON.parse(result[0].lyrics) as LyricsResult;
             }
         })
-        .catch((err) => {
+        .catch(() => {
             return null;
         });
 

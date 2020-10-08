@@ -1,4 +1,4 @@
-import { RowData } from "~components/FilePanel";
+import type { RowData } from "~components/FilePanel";
 import cover from "../../src/renderer/resources/cover.jpg";
 
 export const rows: RowData[] = [

@@ -1,7 +1,9 @@
 import * as React from "react";
-import { FC } from "react";
-import { createStyles, List, makeStyles, Theme } from "@material-ui/core";
-import FilePanel, { RowData } from "~components/FilePanel";
+import type { FC } from "react";
+import type { Theme } from "@material-ui/core";
+import { createStyles, List, makeStyles } from "@material-ui/core";
+import type { RowData } from "~components/FilePanel";
+import FilePanel from "~components/FilePanel";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

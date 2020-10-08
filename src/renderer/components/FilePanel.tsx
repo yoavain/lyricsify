@@ -1,6 +1,6 @@
 import * as React from "react";
-import { FC } from "react";
-import { ClassNameMap } from "@material-ui/core/styles/withStyles";
+import type { FC } from "react";
+import type { ClassNameMap } from "@material-ui/core/styles/withStyles";
 import { Avatar, Divider, IconButton, ListItem, ListItemAvatar, ListItemText, Typography } from "@material-ui/core";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import { makeStyles } from "@material-ui/core/styles";
