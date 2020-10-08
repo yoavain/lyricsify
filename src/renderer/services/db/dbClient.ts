@@ -34,7 +34,7 @@ export const getLyricsFromDb = async (artist: string, track: string): Promise<Ly
                 return JSON.parse(result[0].lyrics) as LyricsResult;
             }
         })
-        .catch((err) => {
+        .catch(() => {
             return null;
         });
 
