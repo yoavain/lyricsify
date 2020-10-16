@@ -25,15 +25,22 @@ module.exports = merge(baseConfig, {
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
-                exclude: /node_modules/,
+                exclude: /node_modules/
             },
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'sass-loader' }
+                ]
             },
             {
                 test: /\.css$/,
-                loaders: ['style-loader', 'css-loader']
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' }
+                ]
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/,
@@ -44,7 +51,6 @@ module.exports = merge(baseConfig, {
         ]
     },
     plugins: [
-        new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin({
             title: "Lyricsify"
         }),
@@ -56,5 +62,8 @@ module.exports = merge(baseConfig, {
                 { from: './dev.sqlite3', to: '.' }
             ]
         })
-    ]
+    ],
+    optimization: {
+        moduleIds: 'named'
+    }
 });
