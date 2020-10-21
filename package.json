@@ -57,7 +57,7 @@
         "sqlite3": "5.0.0"
     },
     "devDependencies": {
-        "@hot-loader/react-dom": "16.13.0",
+        "@hot-loader/react-dom": "16.14.0",
         "@testing-library/dom": "7.26.3",
         "@testing-library/jest-dom": "5.11.4",
         "@testing-library/react": "11.1.0",
