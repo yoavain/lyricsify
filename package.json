@@ -48,7 +48,7 @@
         "knex": "0.21.9",
         "moment": "2.29.1",
         "music-metadata": "7.4.1",
-        "node-id3": "0.2.0",
+        "node-id3": "0.2.1",
         "numeral": "2.0.6",
         "p-limit": "3.0.2",
         "react": "17.0.1",
