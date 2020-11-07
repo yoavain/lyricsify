@@ -78,7 +78,7 @@
         "electron": "10.1.5",
         "electron-builder": "22.9.1",
         "electron-react-devtools": "0.5.3",
-        "eslint": "7.12.1",
+        "eslint": "7.13.0",
         "eslint-plugin-import": "2.22.1",
         "eslint-plugin-jest": "24.1.0",
         "eslint-plugin-node": "11.1.0",
