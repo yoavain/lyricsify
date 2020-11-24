@@ -75,7 +75,7 @@
         "copy-webpack-plugin": "6.3.2",
         "cross-env": "7.0.2",
         "css-loader": "5.0.1",
-        "electron": "11.0.2",
+        "electron": "11.0.3",
         "electron-builder": "22.9.1",
         "electron-react-devtools": "0.5.3",
         "eslint": "7.14.0",
