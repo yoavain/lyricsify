@@ -1,26 +1,26 @@
-'use strict';
+"use strict";
 
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-    mode: 'development',
+    mode: "development",
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, "dist"),
+        filename: "[name].js"
     },
     node: {
         __dirname: false,
         __filename: false
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.json'],
+        extensions: [".tsx", ".ts", ".js", ".json"],
         alias: {
             "~src": path.resolve(__dirname, "src"),
             "~components": path.resolve(__dirname, "src/renderer/components"),
             "~resources": path.resolve(__dirname, "resources")
         }
     },
-    devtool: 'source-map',
+    devtool: "source-map",
     plugins: [
     ]
 };

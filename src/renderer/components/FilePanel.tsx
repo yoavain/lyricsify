@@ -61,13 +61,15 @@ const FilePanel: FC<FilePanelProps> = React.memo((props: FilePanelProps) => {
                     </React.Fragment>
                 }
             />
-            {internetLyrics &&
-            <IconButton className={classes.iconButton}>
-                <ArrowDownwardIcon/>
-            </IconButton>
+            {internetLyrics ?
+                <IconButton className={classes.iconButton}>
+                    <ArrowDownwardIcon/>
+                </IconButton> : null
             }
         </ListItem>
-        {!isLast && <Divider variant="inset" component="li"/>}
+        {!isLast ?
+            <Divider variant="inset" component="li"/> : null
+        }
     </React.Fragment>;
 });
 
