@@ -15,7 +15,7 @@ const themeOptions: ThemeOptions = {
     palette: {
         primary: { main: "#053f5b" },
         secondary: { main: "#5e3c6f" },
-        type: "light"
+        type: "dark"
     },
     typography: {
         fontFamily: "Bitter"
@@ -23,7 +23,7 @@ const themeOptions: ThemeOptions = {
 };
 
 const useDarkTheme = (): [ThemeOptions, () => void] => {
-    const [theme, setTheme] = useState(themeOptions);
+    const [theme, setTheme] = useState<ThemeOptions>(themeOptions);
 
     const { palette } = theme;
     const { type } = palette as PaletteOptions;
@@ -41,7 +41,7 @@ const useDarkTheme = (): [ThemeOptions, () => void] => {
     return [theme, toggleDarkMode];
 };
 
-const Application = () => {
+export const Application = () => {
     const [theme, toggleDarkMode] = useDarkTheme();
     const [dir, setDir] = useState("");
     const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -89,7 +89,7 @@ const Application = () => {
 
     return (
         <MuiThemeProvider theme={themeConfig}>
-            <div>
+            <div data-testid={`application-${themeConfig.palette.type}-theme`}>
                 <Grid container spacing={1}>
                     <AppBar position="static">
                         <Grid container direction="row" justify="space-between" alignItems="center">
@@ -97,39 +97,42 @@ const Application = () => {
                                 <SelectFolderButton dir={dir} onSelectDir={onSelectDir}/>
                             </Grid>
                             <Grid item xs>
-                                {selectedRow &&
-                                <ReactPlayer
-                                    className='react-player'
-                                    url={selectedRow.path}
-                                    controls={true}
-                                    width='350px'
-                                    height='35px'
-                                    style={{ color: `${theme?.palette?.secondary}` }}
-                                    playIcon={selectedRow.thumbnail}
-                                    playing={playing}
-                                    onPlay={() => setPlaying(true)}
-                                    onPause={() => setPlaying(false)}
-                                    onEnded={onEnded}
-                                />}
+                                {selectedRow ?
+                                    <ReactPlayer
+                                        className="react-player"
+                                        url={selectedRow.path}
+                                        controls={true}
+                                        width="350px"
+                                        height="35px"
+                                        style={{ color: `${theme?.palette?.secondary}` }}
+                                        playIcon={selectedRow.thumbnail}
+                                        playing={playing}
+                                        onPlay={() => setPlaying(true)}
+                                        onPause={() => setPlaying(false)}
+                                        onEnded={onEnded}
+                                    /> : null
+                                }
                             </Grid>
                             <Grid item>
-                                <FormControlLabel label={"Dark Theme"} control={<Switch onClick={toggleDarkMode}/>}/>
+                                <FormControlLabel label={"Dark Theme"} data-testId="dark-theme-button" control={<Switch onClick={toggleDarkMode}/>}/>
                             </Grid>
                         </Grid>
                     </AppBar>
                 </Grid>
                 <Grid container spacing={1}>
                     <Grid item xs>
-                        {rows.length > 0 && <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/>}
+                        {rows.length > 0 ?
+                            <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/> : null
+                        }
                     </Grid>
                     <Grid item xs>
-                        {selectedRow &&
-                        <LyricsCard
-                            title={selectedRow.title}
-                            artist={selectedRow.artist}
-                            lyrics={selectedRow.lyrics || selectedRow.internetLyrics}
-                            gotLyricsFromInternetCallback={(lyrics) => internetLyricsSetter(selectedIndex, lyrics)}
-                        />
+                        {selectedRow ?
+                            <LyricsCard
+                                title={selectedRow.title}
+                                artist={selectedRow.artist}
+                                lyrics={selectedRow.lyrics || selectedRow.internetLyrics}
+                                gotLyricsFromInternetCallback={(lyrics) => internetLyricsSetter(selectedIndex, lyrics)}
+                            /> : null
                         }
                     </Grid>
                 </Grid>
