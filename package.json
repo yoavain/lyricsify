@@ -14,9 +14,9 @@
         "start": "electron .",
         "eslint": "eslint src/ test/",
         "eslint:fix": "npm run eslint -- --fix",
-        "test": "cross-env TEST_MODE=true jest --coverage test/(?!(e2e)).*",
+        "test": "cross-env TEST_MODE=true jest test/(?!(e2e)).*",
         "pretest:e2e": "npm run build",
-        "test:e2e": "jest --coverage test/e2e",
+        "test:e2e": "jest test/e2e",
         "pack": "npm run build && electron-builder --dir",
         "dist": "npm run build && electron-builder",
         "postinstall": "electron-builder install-app-deps",
@@ -117,23 +117,6 @@
         "{src,test,mocks}/**/*.{js,ts,tsx}": [
             "eslint --fix"
         ]
-    },
-    "jest": {
-        "transform": {
-            "^.+\\.tsx?$": "ts-jest"
-        },
-        "testRegex": "(/test/.+\\.test)\\.tsx?$",
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "json",
-            "node"
-        ],
-        "moduleNameMapper": {
-            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
-            "\\.(s?css|sass)$": "<rootDir>/mocks/styleMock.js"
-        }
     },
     "build": {
         "productName": "Lyricsify",
