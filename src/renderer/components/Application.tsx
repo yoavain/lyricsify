@@ -114,7 +114,7 @@ export const Application = () => {
                                 }
                             </Grid>
                             <Grid item>
-                                <FormControlLabel label={"Dark Theme"} data-testId="dark-theme-button" control={<Switch onClick={toggleDarkMode}/>}/>
+                                <FormControlLabel label={"Dark Theme"} data-testid="dark-theme-button" control={<Switch onClick={toggleDarkMode}/>}/>
                             </Grid>
                         </Grid>
                     </AppBar>
