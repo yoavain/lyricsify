@@ -114,7 +114,11 @@ export const Application = () => {
                                 }
                             </Grid>
                             <Grid item>
-                                <FormControlLabel label={"Dark Theme"} data-testid="dark-theme-button" control={<Switch onClick={toggleDarkMode}/>}/>
+                                <FormControlLabel
+                                    label={"Dark Theme"}
+                                    data-testid="dark-theme-button"
+                                    control={<Switch onClick={toggleDarkMode}/>}
+                                />
                             </Grid>
                         </Grid>
                     </AppBar>
@@ -122,7 +126,11 @@ export const Application = () => {
                 <Grid container spacing={1}>
                     <Grid item xs>
                         {rows.length > 0 ?
-                            <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/> : null
+                            <FileListPanel
+                                rows={rows}
+                                selectedIndex={selectedIndex}
+                                onSelectItemClick={setSelectedIndex}
+                            /> : null
                         }
                     </Grid>
                     <Grid item xs>

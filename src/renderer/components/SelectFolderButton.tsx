@@ -29,11 +29,9 @@ const SelectFolderButton: FC<SelectFolderButtonProps> = (props: SelectFolderButt
     };
 
     return (
-        <div className="counter">
-            <Button id="increment" variant="contained" color="secondary" onClick={selectFolder}>
-                {props.dir || "Select Directory"}
-            </Button>
-        </div>
+        <Button id="select-folder-button" data-testid="select-folder-button" variant="contained" color="secondary" onClick={selectFolder}>
+            {props.dir || "Select Directory"}
+        </Button>
     );
 };
 

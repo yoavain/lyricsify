@@ -18,22 +18,27 @@ describe("Test Application", () => {
     
     describe("Test Application Theme", () => {
         it("Should toggle themes (default=dark)", () => {
-            const page = renderApplication();
+            const { queryByTestId } = renderApplication();
 
             // Default "dark"
-            expect(page.queryByTestId("application-dark-theme")).not.toBeNull();
+            expect(queryByTestId("application-dark-theme")).not.toBeNull();
 
             // Toggle
-            const darkThemeButton = page.queryByTestId("dark-theme-button");
+            const darkThemeButton = queryByTestId("dark-theme-button");
             userEvent.click(darkThemeButton);
 
             // Light
-            expect(page.queryByTestId("application-light-theme")).not.toBeNull();
+            expect(queryByTestId("application-light-theme")).not.toBeNull();
         });
     });
 
     describe("Test FileListPanel", () => {
-        
+        it("Should select dir", async () => {
+            const page = renderApplication();
+
+            const selectFolderButton = page.queryByTestId("select-folder-button");
+            userEvent.click(selectFolderButton);
+        });
     });
 
     describe("Test FilePanel", () => {

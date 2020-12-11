@@ -30,10 +30,10 @@ interface FileListPanelProps {
 
 const FileListPanel: FC<FileListPanelProps> = (props: FileListPanelProps) => {
     const classes = useStyles();
-    const { rows, selectedIndex } = props;
+    const { rows, selectedIndex, onSelectItemClick } = props;
 
     const handleListItemClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
-        props.onSelectItemClick(index);
+        onSelectItemClick(index);
     };
 
     return (
