@@ -105,7 +105,6 @@ export const Application = () => {
                                         width="350px"
                                         height="35px"
                                         style={{ color: `${theme?.palette?.secondary}` }}
-                                        playIcon={selectedRow.thumbnail}
                                         playing={playing}
                                         onPlay={() => setPlaying(true)}
                                         onPause={() => setPlaying(false)}
