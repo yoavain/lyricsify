@@ -42,7 +42,6 @@
         "@typescript-eslint/interface-name-prefix": [0, "never"],
         "arrow-parens": ["error"],
         "quote-props": ["error", "consistent-as-needed", { "numbers": true }],
-        "no-unused-vars": "error",
         "no-useless-escape": "error",
         "no-empty-pattern": "error",
         "no-eval": "error",
