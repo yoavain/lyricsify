@@ -10,6 +10,7 @@ import { folderParser } from "~src/main/folderParser";
 import type { RowData } from "~components/FilePanel";
 import type { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import ReactPlayer from "react-player";
+import { addLyrics } from "~src/main/lyricsUtils/id3Utils";
 
 const themeOptions: ThemeOptions = {
     palette: {
@@ -86,6 +87,16 @@ export const Application = () => {
             ]);
         }
     };
+    
+    const saveLyrics = async (selectedIndex: number) => {
+        if (selectedIndex >= 0) {
+            const row = rows[selectedIndex];
+            if (row.internetLyrics) {
+                console.log("Saving lyrics to " + row.path);
+                await addLyrics(row.path, row.internetLyrics);
+            }
+        }
+    };
 
     return (
         <MuiThemeProvider theme={themeConfig}>
@@ -121,7 +132,12 @@ export const Application = () => {
                 <Grid container spacing={1}>
                     <Grid item xs>
                         {rows.length > 0 ?
-                            <FileListPanel rows={rows} selectedIndex={selectedIndex} onSelectItemClick={setSelectedIndex}/> : null
+                            <FileListPanel
+                                rows={rows}
+                                selectedIndex={selectedIndex}
+                                onSelectItemClick={setSelectedIndex}
+                                onSaveLyrics={saveLyrics}
+                            /> : null
                         }
                     </Grid>
                     <Grid item xs>

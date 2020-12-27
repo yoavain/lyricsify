@@ -19,6 +19,7 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
+      "~root/*": ["*"],
       "~src/*": ["src/*"],
       "~components/*": ["src/renderer/components/*"],
       "~resources/*": ["resources/*"],

@@ -27,7 +27,8 @@ interface FilePanelProps {
     isLast: boolean
     onClick: (event) => void,
     classes: ClassNameMap<"inline" | "large" | "root">,
-    row: RowData
+    row: RowData,
+    onSaveLyrics: (event) => void
 }
 
 const useStyles = makeStyles(() => ({
@@ -41,7 +42,7 @@ const useStyles = makeStyles(() => ({
 
 
 const FilePanel: FC<FilePanelProps> = React.memo((props: FilePanelProps) => {
-    const { row, isSelected, isLast, onClick } = props;
+    const { row, isSelected, isLast, onClick, onSaveLyrics } = props;
     const { artist, title, album, year, thumbnail, internetLyrics } = row;
     const classes = useStyles();
 
@@ -62,7 +63,7 @@ const FilePanel: FC<FilePanelProps> = React.memo((props: FilePanelProps) => {
                 }
             />
             {internetLyrics ?
-                <IconButton className={classes.iconButton}>
+                <IconButton className={classes.iconButton} onClick={onSaveLyrics}>
                     <ArrowDownwardIcon/>
                 </IconButton> : null
             }

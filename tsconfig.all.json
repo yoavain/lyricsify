@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "noEmit": true,
     "paths": {
+      "~root/*": ["*"],
       "~src/*": ["src/*"],
       "~components/*": ["src/renderer/components/*"],
       "~resources/*": ["resources/*"],

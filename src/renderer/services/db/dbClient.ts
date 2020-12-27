@@ -1,4 +1,4 @@
-import { test, development } from "../../../../knexfile";
+import { test, development } from "~root/knexfile";
 import knex from "knex";
 import type { LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 

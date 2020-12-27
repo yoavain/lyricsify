@@ -26,6 +26,7 @@ interface FileListPanelProps {
     rows: RowData[];
     selectedIndex: number;
     onSelectItemClick: (selectedIndex: number) => void;
+    onSaveLyrics: (selectedIndex: number) => void;
 }
 
 const FileListPanel: FC<FileListPanelProps> = (props: FileListPanelProps) => {
@@ -34,6 +35,10 @@ const FileListPanel: FC<FileListPanelProps> = (props: FileListPanelProps) => {
 
     const handleListItemClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
         props.onSelectItemClick(index);
+    };
+
+    const handleSaveLyrics = (event: React.MouseEvent<HTMLDivElement, MouseEvent>, index: number) => {
+        props.onSaveLyrics(index);
     };
 
     return (
@@ -46,6 +51,7 @@ const FileListPanel: FC<FileListPanelProps> = (props: FileListPanelProps) => {
                         isSelected={index === selectedIndex}
                         isLast={index === rows.length - 1}
                         onClick={(event) => handleListItemClick(event, index)}
+                        onSaveLyrics={(event) => handleSaveLyrics(event, index)}
                         classes={classes}
                     />
                 );
