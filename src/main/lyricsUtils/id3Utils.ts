@@ -19,14 +19,16 @@ export const addLyrics = async (inFile: string, lyrics: string) => {
     };
 
 
-    // Backup original file
+    // Backup original file (if not already there)
     const parsedFile: path.ParsedPath = path.parse(inFile);
     const backupDir: string = path.join(parsedFile.dir, BACKUP_DIR);
     if (!fs.existsSync(backupDir)) {
         fs.mkdirSync(backupDir);
     }
     const backupFile = path.join(backupDir, parsedFile.base);
-    await fsPromises.copyFile(inFile, backupFile);
+    if (!fs.existsSync(backupFile)) {
+        await fsPromises.copyFile(inFile, backupFile);
+    }
 
     console.log("source.txt was copied to destination.txt");
     await NodeID3AsyncUpdate(updatedTags, inFile);
