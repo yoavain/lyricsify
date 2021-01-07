@@ -65,7 +65,7 @@
         "@types/deep-diff": "1.0.0",
         "@types/jest": "26.0.20",
         "@types/node": "14.14.20",
-        "@types/numeral": "0.0.28",
+        "@types/numeral": "0.0.29",
         "@types/react": "17.0.0",
         "@types/react-dom": "17.0.0",
         "@types/react-test-renderer": "17.0.0",
