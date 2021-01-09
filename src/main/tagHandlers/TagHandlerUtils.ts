@@ -34,5 +34,4 @@ export const restoreOriginalFile = async (inFile: string): Promise<void> => {
     else {
         throw new Error("Backup file does not exist");
     }
-
 };

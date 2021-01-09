@@ -65,4 +65,3 @@ export const folderParser = async (dir: string): Promise<Array<RowData>> => {
     
     return rowsData;
 };
-

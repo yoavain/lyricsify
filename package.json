@@ -1,6 +1,6 @@
 {
     "name": "lyricsify",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "Batch download lyrics and embed in audio files",
     "main": "./dist/main.js",
     "scripts": {
@@ -43,9 +43,9 @@
         "@babel/runtime": "7.12.5",
         "@material-ui/core": "4.11.2",
         "@material-ui/icons": "4.11.2",
-        "deep-diff": "1.0.2",
         "got": "11.8.1",
         "knex": "0.21.15",
+        "metaflac-js": "1.0.5",
         "moment": "2.29.1",
         "music-metadata": "7.6.2",
         "node-id3": "0.2.2",
@@ -62,7 +62,6 @@
         "@testing-library/jest-dom": "5.11.8",
         "@testing-library/react": "11.2.3",
         "@testing-library/user-event": "12.6.0",
-        "@types/deep-diff": "1.0.0",
         "@types/jest": "26.0.20",
         "@types/node": "14.14.20",
         "@types/numeral": "0.0.29",
