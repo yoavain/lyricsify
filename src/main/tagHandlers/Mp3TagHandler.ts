@@ -1,14 +1,8 @@
-import * as fs from "fs";
-import * as path from "path";
-import { diff } from "deep-diff";
+import type { TagHandlerInterface } from "~src/main/tagHandlers/TagHandler";
 import type { Tags } from "node-id3";
-import * as NodeID3 from "node-id3";
+import NodeID3 from "node-id3";
 
-const fsPromises = fs.promises;
-
-const BACKUP_DIR = "_backup";
-
-export const addLyrics = async (inFile: string, lyrics: string) => {
+const addLyrics = async (inFile: string, lyrics: string): Promise<void> => {
     const tags: Tags = await NodeId3AsyncRead(inFile);
     const updatedTags: Tags = {
         ...tags,
@@ -18,25 +12,12 @@ export const addLyrics = async (inFile: string, lyrics: string) => {
         }
     };
 
-
-    // Backup original file (if not already there)
-    const parsedFile: path.ParsedPath = path.parse(inFile);
-    const backupDir: string = path.join(parsedFile.dir, BACKUP_DIR);
-    if (!fs.existsSync(backupDir)) {
-        fs.mkdirSync(backupDir);
-    }
-    const backupFile = path.join(backupDir, parsedFile.base);
-    if (!fs.existsSync(backupFile)) {
-        await fsPromises.copyFile(inFile, backupFile);
-    }
-
-    console.log("source.txt was copied to destination.txt");
     await NodeID3AsyncUpdate(updatedTags, inFile);
+};
 
-    const validationTags: Tags = await NodeId3AsyncRead(inFile);
-
-    const diffData = diff(updatedTags, validationTags);
-    console.log(JSON.stringify(diffData, null, "\t"));
+const getLyrics = async (inFile: string): Promise<string> => {
+    const tagsInNewFile: Tags = await NodeId3AsyncRead(inFile);
+    return tagsInNewFile?.unsynchronisedLyrics?.text;
 };
 
 const NodeId3AsyncRead = async (filebuffer: string | Buffer): Promise<Tags> => {
@@ -63,4 +44,9 @@ const NodeID3AsyncUpdate = async (tags: Tags, filepath: string): Promise<void> =
             }
         });
     });
+};
+
+export const Mp3TagHandler: TagHandlerInterface = {
+    addLyrics,
+    getLyrics
 };

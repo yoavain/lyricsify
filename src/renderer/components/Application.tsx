@@ -10,7 +10,7 @@ import { folderParser } from "~src/main/folderParser";
 import type { RowData } from "~components/FilePanel";
 import type { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import ReactPlayer from "react-player";
-import { addLyrics } from "~src/main/lyricsUtils/id3Utils";
+import { addLyrics } from "~src/main/tagHandlers/TagHandler";
 
 const themeOptions: ThemeOptions = {
     palette: {
