@@ -5,6 +5,7 @@ const LYRICS_TAG_NAME = "UNSYNCEDLYRICS";
 
 const addLyrics = async (inFile: string, lyrics: string): Promise<void> => {
     const flac = new Metaflac(inFile);
+    flac.removeTag(LYRICS_TAG_NAME);
     flac.setTag(`${LYRICS_TAG_NAME}=${lyrics}`);
     flac.save();
 };
