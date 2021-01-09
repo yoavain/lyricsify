@@ -10,7 +10,8 @@ import { folderParser } from "~src/main/folderParser";
 import type { RowData } from "~components/FilePanel";
 import type { PaletteOptions } from "@material-ui/core/styles/createPalette";
 import ReactPlayer from "react-player";
-import { addLyrics } from "~src/main/lyricsUtils/id3Utils";
+import { tagHandlerFactory } from "~src/main/tagHandlers/TagHandlerFactory";
+import type { TagHandlerInterface } from "~src/main/tagHandlers/TagHandlerInterface";
 
 const themeOptions: ThemeOptions = {
     palette: {
@@ -93,7 +94,8 @@ export const Application = () => {
             const row = rows[selectedIndex];
             if (row.internetLyrics) {
                 console.log("Saving lyrics to " + row.path);
-                await addLyrics(row.path, row.internetLyrics);
+                const tagHandler: TagHandlerInterface = tagHandlerFactory(row.path);
+                await tagHandler.addLyrics(row.path, row.internetLyrics);
             }
         }
     };
