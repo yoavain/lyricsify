@@ -1,6 +1,6 @@
 {
     "name": "lyricsify",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Batch download lyrics and embed in audio files",
     "main": "./dist/main.js",
     "scripts": {
