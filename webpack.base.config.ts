@@ -1,8 +1,7 @@
-"use strict";
+import type webpack from "webpack";
+import path from "path";
 
-const path = require("path");
-
-module.exports = {
+export const baseConfig: webpack.Configuration = {
     mode: "development",
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -25,3 +24,5 @@ module.exports = {
     plugins: [
     ]
 };
+
+export default baseConfig;

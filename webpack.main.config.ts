@@ -1,9 +1,8 @@
-const webpack = require("webpack");
-const { merge } = require("webpack-merge");
+import webpack from "webpack";
+import { merge } from "webpack-merge";
+import { baseConfig } from "./webpack.base.config";
 
-const baseConfig = require("./webpack.base.config");
-
-module.exports = merge(baseConfig, {
+export const mainConfig: webpack.Configuration = merge(baseConfig, {
     target: "electron-main",
     entry: {
         main: "./src/main/main.ts"
@@ -11,7 +10,7 @@ module.exports = merge(baseConfig, {
     module: {
         rules: [
             {
-                test: /node_modules[\/\\](iconv-lite)[\/\\].+/,
+                test: /node_modules[/\\](iconv-lite)[/\\].+/,
                 resolve: {
                     aliasFields: ["main"]
                 }
@@ -19,7 +18,7 @@ module.exports = merge(baseConfig, {
             {
                 test: /\.tsx?$/,
                 use: "ts-loader",
-                exclude: /node_modules/,
+                exclude: /node_modules/
             }
         ]
     },
@@ -29,3 +28,5 @@ module.exports = merge(baseConfig, {
         })
     ]
 });
+
+export default mainConfig;

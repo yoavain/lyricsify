@@ -1,11 +1,10 @@
-const webpack = require("webpack");
-const { merge } = require("webpack-merge");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+import webpack from "webpack";
+import { merge } from "webpack-merge";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
+import { baseConfig } from "./webpack.base.config";
 
-const baseConfig = require("./webpack.base.config");
-
-module.exports = merge(baseConfig, {
+export const rendererConfig: webpack.Configuration = merge(baseConfig, {
     target: "electron-renderer",
     entry: {
         app: "./src/renderer/app.tsx"
@@ -67,3 +66,5 @@ module.exports = merge(baseConfig, {
         moduleIds: "named"
     }
 });
+
+export default rendererConfig;
