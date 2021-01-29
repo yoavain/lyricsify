@@ -21,7 +21,8 @@
         "dist": "npm run build && electron-builder",
         "postinstall": "electron-builder install-app-deps",
         "db": "ts-node src/renderer/services/db/client.ts",
-        "db-init": "knex migrate:down && knex migrate:latest"
+        "db-init": "knex migrate:down && knex migrate:latest",
+        "index-generator": "cti create --output index.tsx --withoutbackup --quote ./src"
     },
     "keywords": [
         "Electron",
@@ -73,6 +74,7 @@
         "@typescript-eslint/parser": "4.14.1",
         "concurrently": "5.3.0",
         "copy-webpack-plugin": "7.0.0",
+        "create-ts-index": "1.13.6",
         "cross-env": "7.0.3",
         "css-loader": "5.0.1",
         "electron": "11.2.1",
