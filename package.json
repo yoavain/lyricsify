@@ -22,7 +22,7 @@
         "postinstall": "electron-builder install-app-deps",
         "db": "ts-node src/renderer/services/db/client.ts",
         "db-init": "knex migrate:down && knex migrate:latest",
-        "index-generator": "cti create --output index.tsx --withoutbackup --quote ./src"
+        "index-generator": "cti create --output index.tsx --addnewline --withoutcomment --quote \\\" --withoutbackup ./src"
     },
     "keywords": [
         "Electron",
