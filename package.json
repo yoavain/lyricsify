@@ -48,7 +48,7 @@
         "knex": "0.21.17",
         "metaflac-js": "1.0.5",
         "moment": "2.29.1",
-        "music-metadata": "7.6.7",
+        "music-metadata": "7.6.8",
         "node-id3": "0.2.2",
         "numeral": "2.0.6",
         "p-limit": "3.1.0",
