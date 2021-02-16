@@ -55,7 +55,7 @@
         "react": "17.0.1",
         "react-dom": "17.0.1",
         "react-player": "2.8.2",
-        "sqlite3": "5.0.1"
+        "sqlite3": "5.0.2"
     },
     "devDependencies": {
         "@hot-loader/react-dom": "17.0.1",
