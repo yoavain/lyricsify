@@ -54,7 +54,7 @@
         "p-limit": "3.1.0",
         "react": "17.0.1",
         "react-dom": "17.0.1",
-        "react-player": "2.8.2",
+        "react-player": "2.9.0",
         "sqlite3": "5.0.2"
     },
     "devDependencies": {
