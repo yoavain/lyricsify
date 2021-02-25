@@ -75,7 +75,7 @@
         "concurrently": "6.0.0",
         "copy-webpack-plugin": "7.0.0",
         "cross-env": "7.0.3",
-        "css-loader": "5.0.2",
+        "css-loader": "5.1.0",
         "electron": "11.3.0",
         "electron-builder": "22.9.1",
         "electron-react-devtools": "0.5.3",
