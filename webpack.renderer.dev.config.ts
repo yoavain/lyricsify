@@ -1,4 +1,4 @@
-import webpack = require("webpack");
+import type webpack = require("webpack");
 import { merge } from "webpack-merge";
 import { rendererConfig } from "./webpack.renderer.config";
 
