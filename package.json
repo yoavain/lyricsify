@@ -95,7 +95,7 @@
         "prettier": "2.2.1",
         "react-hot-loader": "4.13.0",
         "sass-loader": "11.0.1",
-        "spectron": "13.0.0",
+        "spectron": "14.0.0",
         "style-loader": "2.0.0",
         "ts-jest": "26.5.3",
         "ts-loader": "8.0.17",
