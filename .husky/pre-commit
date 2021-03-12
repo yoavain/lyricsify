@@ -1,1 +1,3 @@
+echo before lint
 npm run lint-staged
+echo after lint

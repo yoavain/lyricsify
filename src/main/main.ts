@@ -2,7 +2,7 @@ import { app, BrowserWindow } from "electron";
 import * as path from "path";
 import * as url from "url";
 
-let mainWindow: BrowserWindow    | null;
+let mainWindow: BrowserWindow        | null;
 
 const createWindow = async () => {
     mainWindow = new BrowserWindow({
