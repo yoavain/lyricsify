@@ -22,7 +22,8 @@
         "postinstall": "electron-builder install-app-deps",
         "db": "ts-node src/renderer/services/db/client.ts",
         "db-init": "knex migrate:down && knex migrate:latest",
-        "lint-staged": "lint-staged || exit 0"
+        "lint-staged": "lint-staged || exit 0",
+        "prepare": "husky install"
     },
     "keywords": [
         "Electron",
