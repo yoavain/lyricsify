@@ -16,7 +16,6 @@ const createWindow = async () => {
         }
     });
 
-
     mainWindow.loadURL(
         url.format({
             pathname: path.join(__dirname, "index.html"),
