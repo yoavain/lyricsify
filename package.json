@@ -19,7 +19,8 @@
         "test:e2e": "jest test/e2e",
         "pack": "npm run build && electron-builder --dir",
         "dist": "npm run build && electron-builder",
-        "postinstall": "electron-builder install-app-deps",
+        "huskypostinstall": "git config --get core.hookspath || husky install",
+        "postinstall": "npm run huskypostinstall && electron-builder install-app-deps",
         "db": "ts-node src/renderer/services/db/client.ts",
         "db-init": "knex migrate:down && knex migrate:latest",
         "lint-staged": "lint-staged || exit 0"
