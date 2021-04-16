@@ -8,16 +8,16 @@ export type LyricsResult = {
             text: string
             lang: {
                 code: string
-                name: string
+                name?: string
             }
         },
         copyright: {
             notice: string
-            artist: string
+            artist?: string
             text: string
         },
-        probability: number
-        similarity: number
+        probability?: number
+        similarity?: number
     }
 }
 

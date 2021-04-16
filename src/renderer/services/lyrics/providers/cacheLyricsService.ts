@@ -1,9 +1,9 @@
 import type { GetLyricsService, LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
-import { getLyrics as apiseedsLyricsServiceGetLyrics } from "~src/renderer/services/lyrics/providers/apiseedsLyricsService";
+import { getLyrics as happiDevLyricsServiceGetLyrics } from "~src/renderer/services/lyrics/providers/happiDevLyricsService";
 import { getLyricsFromDb, putLyricsInDb } from "~src/renderer/services/db/dbClient";
 
 const lyricsServices: GetLyricsService[] = [
-    apiseedsLyricsServiceGetLyrics
+    happiDevLyricsServiceGetLyrics
 ];
 
 export const getLyrics: GetLyricsService = async (artist: string, track: string): Promise<LyricsResult> => {
