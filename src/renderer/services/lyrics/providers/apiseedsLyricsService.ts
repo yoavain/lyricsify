@@ -1,3 +1,9 @@
+/**
+ * Implementation for happi.dev
+ * 
+ * Documentation: https://happi.dev/docs/music
+ */
+
 import type { GetLyricsService, LyricsResult } from "~src/renderer/services/lyrics/lyricsServiceIfc";
 import got from "got";
 
