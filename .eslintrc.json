@@ -34,7 +34,7 @@
     "rules": {
         // code
         "max-params": ["warn", 3],
-        "max-depth": ["error", 3],
+        "max-depth": ["error", 4],
         "max-statements-per-line": ["error", { "max": 1 }],
         "max-lines": ["error", { "max": 250, "skipBlankLines": true, "skipComments": true }],
         "max-lines-per-function": ["warn", { "max": 50, "skipBlankLines": true, "skipComments": true }],

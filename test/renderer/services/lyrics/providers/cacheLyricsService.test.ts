@@ -6,6 +6,12 @@ jest.mock("~src/renderer/services/lyrics/providers/apiseedsLyricsService", () =>
     };
 });
 
+jest.mock("~src/renderer/services/lyrics/providers/happiDevLyricsService", () => {
+    return {
+        getLyrics: mockGetLyrics
+    };
+});
+
 import { getLyrics } from "~src/renderer/services/lyrics/providers/cacheLyricsService";
 import { knexClient } from "~src/renderer/services/db/dbClient";
 
