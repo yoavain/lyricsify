@@ -83,7 +83,7 @@
         "electron-react-devtools": "0.5.3",
         "eslint": "7.25.0",
         "eslint-plugin-import": "2.22.1",
-        "eslint-plugin-jest": "24.3.5",
+        "eslint-plugin-jest": "24.3.6",
         "eslint-plugin-node": "11.1.0",
         "eslint-plugin-react": "7.23.2",
         "eslint-plugin-security": "1.4.0",
