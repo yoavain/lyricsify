@@ -79,7 +79,7 @@
         "cross-env": "7.0.3",
         "css-loader": "5.2.4",
         "electron": "11.4.6",
-        "electron-builder": "22.11.1",
+        "electron-builder": "22.11.2",
         "electron-react-devtools": "0.5.3",
         "eslint": "7.26.0",
         "eslint-plugin-import": "2.22.1",
