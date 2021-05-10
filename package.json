@@ -94,7 +94,7 @@
         "lint-staged": "11.0.0",
         "node-loader": "2.0.0",
         "node-sass": "6.0.0",
-        "prettier": "2.2.1",
+        "prettier": "2.3.0",
         "react-hot-loader": "4.13.0",
         "sass-loader": "11.0.1",
         "spectron": "13.0.0",
