@@ -1,6 +1,6 @@
-import { Mp3TagHandler } from "~src/main/tagHandlers/Mp3TagHandler";
-import { FlacTagHandler } from "~src/main/tagHandlers/FlacTagHandler";
-import type { TagHandlerInterface } from "~src/main/tagHandlers/TagHandler";
+import { Mp3TagHandler } from "./Mp3TagHandler";
+import { FlacTagHandler } from "./FlacTagHandler";
+import type { TagHandlerInterface } from "./TagHandler";
 
 export const tagHandlerFactory = (inFile: string): TagHandlerInterface => {
     const extension: string = inFile.toLowerCase().split(".").pop();

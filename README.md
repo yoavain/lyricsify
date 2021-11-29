@@ -15,49 +15,32 @@ This is an audio player, that:
 3. (Optionally) embeds lyrics in file
 
 Lyrics providers:
-1. apiseeds.com (requires API token)   
+1. apiseeds.com (requires API token)
 
-## Install
-Clone the repository with Git:
+## 🏃‍♂️ Getting Started
 
+Run the following commands to start the project:
 ```bash
 git clone ...
-```
-
-And then install the dependencies:
-
-```bash
 cd <your-project-name>
 npm install
 ```
 
-## Usage
-Both processes have to be started **simultaneously** in different console tabs:
+*The `electron` command in the `package.json` file is only used internally by the boilerplate to launch electron.*
 
-```bash
-npm run start-renderer-dev
-npm run start-main-dev
-```
+## 🏗️ How to Build the Project
 
-This will start the application with hot-reload so you can instantly start developing your application.
+Run `npm run build`. This will create a `dist` folder with:
 
-You can also run do the following to start both in a single process:
+- A folder called `app-win32-ia32` containing the executable file
+- A folder called `installer` containing the setup files to install the app
 
-```bash
-npm run start-dev
-```
+## 🌳 The Project Structure
 
-## Packaging
-We use [Electron builder](https://www.electron.build/) to build and package the application. By default you can run the following to package for your current platform:
+- 📁 `public`: Holds all your public assets, such as styles, images or fonts. Also holds the `index.html`
+- 📁 `scripts`: Holds the `start` and `build` script. This is where you can configure the setup
+- 📂 `src`
+    - 📁 `components`: A place to hold your React components
+    - 📁 `electron`: Includes the start scripts for a `dev` and `prod` Electron build
 
-```bash
-npm run dist
-```
-
-This will create a installer for your platform in the `releases` folder.
-
-You can make builds for specific platforms (or multiple platforms) by using the options found [here](https://www.electron.build/cli). E.g. building for all platforms (Windows, Mac, Linux):
-
-```bash
-npm run dist -- -mwl
-```
+  
