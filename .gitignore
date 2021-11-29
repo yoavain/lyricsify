@@ -1,8 +1,9 @@
-node_modules/
-dist/
-release/
+# Dependencies
+node_modules
+
+# Builds
+.cache
+dist
+build
 /.idea/
-/coverage/
 /lyricsify.iml
-/lsp/
-/tokens.json

@@ -1,6 +1,6 @@
-import type { TagHandlerInterface } from "~src/main/tagHandlers/TagHandler";
+import type { TagHandlerInterface } from "./TagHandler";
 import type { Tags } from "node-id3";
-import NodeID3 from "node-id3";
+import * as NodeID3 from "node-id3";
 
 const addLyrics = async (inFile: string, lyrics: string): Promise<void> => {
     const tags: Tags = await NodeId3AsyncRead(inFile);

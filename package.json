@@ -1,26 +1,17 @@
 {
     "name": "lyricsify",
-    "version": "0.2.3",
+    "version": "0.5.0",
     "description": "Batch download lyrics and embed in audio files",
-    "main": "./dist/main.js",
+    "main": "src/electron/index.ts",
     "scripts": {
-        "build-main": "cross-env NODE_ENV=production webpack --config webpack.main.prod.config.ts",
-        "build-renderer": "cross-env NODE_ENV=production webpack --config webpack.renderer.prod.config.ts",
-        "build": "npm run test && npm run build-main && npm run build-renderer",
-        "start-renderer-dev": "webpack --watch --config webpack.renderer.dev.config.ts",
-        "start-main-dev": "webpack --config webpack.main.config.ts && electron ./dist/main.js",
-        "start-dev": "concurrently \"npm run start-renderer-dev\" \"npm run start-main-dev\"",
-        "prestart": "npm run build",
-        "start": "electron .",
+        "start": "node scripts/start.ts",
+        "electron": "electron .",
+        "build": "node scripts/build.ts",
         "eslint": "eslint src/ test/",
         "eslint:fix": "npm run eslint -- --fix",
-        "test": "cross-env TEST_MODE=true jest test/(?!(e2e)).*",
-        "pretest:e2e": "npm run build",
-        "test:e2e": "jest test/e2e",
-        "pack": "npm run build && electron-builder --dir",
-        "dist": "npm run build && electron-builder",
+        "test": "cross-env TEST_MODE=true jest test/",
         "huskypostinstall": "git config --get core.hookspath || husky install",
-        "postinstall": "npm run huskypostinstall && electron-builder install-app-deps",
+        "postinstall": "npm run huskypostinstall",
         "db": "ts-node src/renderer/services/db/client.ts",
         "db-init": "knex migrate:down && knex migrate:latest",
         "lint-staged": "lint-staged || exit 0"
@@ -43,69 +34,44 @@
         "npm": "<7"
     },
     "dependencies": {
-        "@babel/runtime": "7.16.3",
         "@material-ui/core": "4.12.3",
         "@material-ui/icons": "4.11.2",
-        "got": "11.8.3",
         "knex": "0.95.14",
         "metaflac-js": "1.0.5",
-        "moment": "2.29.1",
         "music-metadata": "7.11.4",
         "node-id3": "0.2.3",
-        "numeral": "2.0.6",
-        "p-limit": "4.0.0",
         "react": "17.0.2",
         "react-dom": "17.0.2",
+        "react-hot-loader": "4.13.0",
         "react-player": "2.9.0",
         "sqlite3": "5.0.2"
     },
     "devDependencies": {
-        "@hot-loader/react-dom": "17.0.1",
         "@testing-library/dom": "8.11.1",
         "@testing-library/jest-dom": "5.15.1",
         "@testing-library/react": "12.1.2",
         "@testing-library/user-event": "13.5.0",
         "@types/jest": "27.0.3",
-        "@types/node": "16.11.10",
-        "@types/numeral": "2.0.2",
-        "@types/react": "17.0.37",
-        "@types/react-dom": "17.0.11",
-        "@types/react-test-renderer": "17.0.1",
-        "@types/webpack-env": "1.16.3",
         "@typescript-eslint/eslint-plugin": "5.4.0",
         "@typescript-eslint/parser": "5.4.0",
-        "concurrently": "6.4.0",
-        "copy-webpack-plugin": "10.0.0",
-        "cross-env": "7.0.3",
-        "css-loader": "6.5.1",
-        "electron": "13.6.2",
-        "electron-builder": "22.11.3",
-        "electron-react-devtools": "0.5.3",
-        "eslint": "7.32.0",
+        "electron": "16.0.2",
+        "electron-packager": "15.4.0",
+        "electron-reloader": "1.2.1",
+        "electron-winstaller": "5.0.0",
+        "eslint": "8.3.0",
         "eslint-plugin-import": "2.25.3",
         "eslint-plugin-jest": "25.3.0",
         "eslint-plugin-node": "11.1.0",
         "eslint-plugin-react": "7.27.1",
         "eslint-plugin-security": "1.4.0",
-        "file-loader": "6.2.0",
-        "html-webpack-plugin": "5.5.0",
         "husky": "7.0.4",
         "jest": "27.4.0",
         "lint-staged": "12.1.2",
-        "node-loader": "2.0.0",
-        "node-sass": "6.0.1",
-        "prettier": "2.5.0",
-        "react-hot-loader": "4.13.0",
-        "sass-loader": "12.3.0",
-        "spectron": "15.0.0",
-        "style-loader": "3.3.1",
+        "parcel-bundler": "1.12.4",
+        "sass": "1.43.5",
         "ts-jest": "27.0.7",
-        "ts-loader": "9.2.6",
         "ts-node": "10.4.0",
-        "typescript": "4.5.2",
-        "webpack": "5.64.4",
-        "webpack-cli": "4.9.1",
-        "webpack-merge": "5.8.0"
+        "typescript": "4.5.2"
     },
     "lint-staged": {
         "{src,test,mocks}/**/*.{json,css,scss,md}": [
@@ -114,26 +80,5 @@
         "{src,test,mocks}/**/*.{js,ts,tsx}": [
             "eslint --fix"
         ]
-    },
-    "build": {
-        "productName": "Lyricsify",
-        "appId": "yoavain",
-        "mac": {
-            "category": "music"
-        },
-        "directories": {
-            "output": "release"
-        },
-        "files": [
-            "dist/",
-            "node_modules/",
-            "package.json"
-        ],
-        "linux": {
-            "target": "deb"
-        },
-        "win": {
-            "target": "nsis"
-        }
     }
 }

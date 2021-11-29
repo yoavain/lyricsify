@@ -1,4 +1,4 @@
-import type { TagHandlerInterface } from "~src/main/tagHandlers/TagHandler";
+import type { TagHandlerInterface } from "./TagHandler";
 import Metaflac from "metaflac-js";
 
 const LYRICS_TAG_NAME = "UNSYNCEDLYRICS";

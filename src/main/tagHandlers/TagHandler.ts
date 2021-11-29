@@ -1,5 +1,5 @@
-import { backupOriginalFile, restoreOriginalFile } from "~src/main/tagHandlers/TagHandlerUtils";
-import { tagHandlerFactory } from "~src/main/tagHandlers/TagHandlerFactory";
+import { backupOriginalFile, restoreOriginalFile } from "./TagHandlerUtils";
+import { tagHandlerFactory } from "./TagHandlerFactory";
 
 export interface TagHandlerInterface {
     addLyrics: (inFile: string, lyrics: string) => Promise<void>

@@ -3,7 +3,7 @@ import { promises as fs } from "fs";
 import * as MusicMetadata from "music-metadata";
 import * as path from "path";
 import type { IAudioMetadata, IPicture, ITag } from "music-metadata";
-import type { RowData } from "~components/FilePanel";
+import type { RowData } from "../components/FilePanel";
 
 enum SUPPORTED_FILE_TYPES {
     FLAC = ".flac",

@@ -10,9 +10,7 @@ const createWindow = async () => {
         width: 800,
         height: 600,
         webPreferences: {
-            nodeIntegration: true,
-            enableRemoteModule: true,
-            worldSafeExecuteJavaScript: true
+            nodeIntegration: true
         }
     });
 
