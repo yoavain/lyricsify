@@ -57,7 +57,7 @@
         "@typescript-eslint/eslint-plugin": "5.12.1",
         "@typescript-eslint/parser": "5.12.1",
         "cross-env": "7.0.3",
-        "electron": "17.0.1",
+        "electron": "17.1.0",
         "electron-packager": "15.4.0",
         "electron-reloader": "1.2.3",
         "electron-winstaller": "5.0.0",
