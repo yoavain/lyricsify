@@ -46,7 +46,7 @@
         "react-dom": "18.1.0",
         "react-hot-loader": "4.13.0",
         "react-player": "2.10.0",
-        "sqlite3": "5.0.7"
+        "sqlite3": "5.0.8"
     },
     "devDependencies": {
         "@testing-library/dom": "8.13.0",
