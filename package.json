@@ -13,7 +13,7 @@
         "jest": "cross-env TEST_MODE=true jest test/",
         "test": "npm run eslint && npm run type-check && npm run jest",
         "huskypostinstall": "git config --get core.hookspath || husky install",
-        "postinstall": "npm run huskypostinstall",
+        "postinstall": "npm run huskypostinstall & npx fix-lockfile-integrity package-lock.json",
         "db": "ts-node src/renderer/services/db/client.ts",
         "db-init": "knex migrate:down && knex migrate:latest",
         "lint-staged": "lint-staged || exit 0"
