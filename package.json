@@ -40,7 +40,7 @@
         "@material-ui/icons": "4.11.3",
         "knex": "2.3.0",
         "metaflac-js": "1.0.5",
-        "music-metadata": "7.12.5",
+        "music-metadata": "8.1.0",
         "node-id3": "0.2.3",
         "react": "18.2.0",
         "react-dom": "18.2.0",
