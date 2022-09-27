@@ -1,5 +1,4 @@
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/yoavain/lyricsify.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yoavain/lyricsify/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/yoavain/lyricsify.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/yoavain/lyricsify/context:javascript)
+[![CodeQL](https://github.com/yoavain/lyricsify/workflows/CodeQL/badge.svg)](https://github.com/yoavain/lyricsify/actions?query=workflow%3ACodeQL)
 [![Actions Status](https://github.com/yoavain/lyricsify/workflows/Node%20CI/badge.svg)](https://github.com/yoavain/lyricsify/actions)
 ![types](https://img.shields.io/npm/types/typescript.svg)
 ![commit](https://img.shields.io/github/last-commit/yoavain/lyricsify.svg)
