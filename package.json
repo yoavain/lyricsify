@@ -33,7 +33,7 @@
     "homepage": "https://github.com/yoavain/lyricsify",
     "engines": {
         "node": ">=12 <19",
-        "npm": "<9"
+        "npm": "<10"
     },
     "dependencies": {
         "@material-ui/core": "4.12.4",
