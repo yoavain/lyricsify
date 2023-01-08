@@ -38,9 +38,9 @@
     "dependencies": {
         "@material-ui/core": "4.12.4",
         "@material-ui/icons": "4.11.3",
-        "knex": "2.3.0",
+        "knex": "2.4.0",
         "metaflac-js": "1.0.5",
-        "music-metadata": "7.13.0",
+        "music-metadata": "7.13.1",
         "node-id3": "0.2.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
