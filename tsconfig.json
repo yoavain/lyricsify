@@ -21,7 +21,7 @@
         "noEmit": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "importsNotUsedAsValues": "error",
+        "verbatimModuleSyntax": false,
         "paths": {
             "~src/*": ["src/*"],
             "~components/*": ["src/components/*"],
