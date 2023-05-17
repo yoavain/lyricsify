@@ -47,7 +47,7 @@ jobs:
         HAPPI_DEV_KEY: ${{ secrets.HAPPI_DEV_KEY }}
 
     - name: Codecov
-      uses: codecov/codecov-action@v3.1.3
+      uses: codecov/codecov-action@v3.1.4
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
