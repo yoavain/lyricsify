@@ -57,7 +57,7 @@
         "@typescript-eslint/eslint-plugin": "5.59.9",
         "@typescript-eslint/parser": "5.59.9",
         "cross-env": "7.0.3",
-        "electron": "25.0.1",
+        "electron": "25.1.0",
         "electron-packager": "17.1.1",
         "electron-reloader": "1.2.3",
         "electron-winstaller": "5.1.0",
@@ -72,7 +72,7 @@
         "jest-environment-jsdom": "29.5.0",
         "lint-staged": "13.2.2",
         "parcel-bundler": "1.12.5",
-        "sass": "1.62.1",
+        "sass": "1.63.2",
         "ts-jest": "29.1.0",
         "ts-node": "10.9.1",
         "typescript": "5.1.3"
