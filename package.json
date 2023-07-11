@@ -36,8 +36,8 @@
         "npm": "<=9"
     },
     "dependencies": {
-        "@mui/material": "5.13.7",
-        "@mui/icons-material": "5.13.7",
+        "@mui/material": "5.14.0",
+        "@mui/icons-material": "5.14.0",
         "knex": "2.5.0",
         "metaflac-js": "1.0.5",
         "music-metadata": "7.13.4",
