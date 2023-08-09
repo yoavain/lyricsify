@@ -36,7 +36,7 @@
         "npm": "<=9"
     },
     "dependencies": {
-        "@mui/material": "5.14.3",
+        "@mui/material": "5.14.4",
         "@mui/icons-material": "5.14.3",
         "knex": "2.5.1",
         "metaflac-js": "1.0.5",
