@@ -60,7 +60,7 @@
         "electron": "27.0.4",
         "electron-packager": "17.1.2",
         "electron-reloader": "1.2.3",
-        "electron-winstaller": "5.1.2",
+        "electron-winstaller": "5.2.1",
         "eslint": "8.53.0",
         "eslint-plugin-import": "2.29.0",
         "eslint-plugin-jest": "27.6.0",
