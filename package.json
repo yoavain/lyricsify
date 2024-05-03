@@ -73,9 +73,9 @@
         "lint-staged": "15.2.0",
         "parcel-bundler": "1.12.5",
         "sass": "1.70.0",
-        "ts-jest": "29.1.1",
+        "ts-jest": "29.1.2",
         "ts-node": "10.9.2",
-        "typescript": "5.3.3"
+        "typescript": "5.4.5"
     },
     "lint-staged": {
         "{src,test,mocks}/**/*.{json,css,scss,md}": [
