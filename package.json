@@ -45,7 +45,7 @@
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-hot-loader": "4.13.1",
-        "react-player": "2.14.1",
+        "react-player": "2.16.0",
         "sqlite3": "5.1.7"
     },
     "devDependencies": {
@@ -57,10 +57,10 @@
         "@typescript-eslint/eslint-plugin": "6.21.0",
         "@typescript-eslint/parser": "6.21.0",
         "cross-env": "7.0.3",
-        "electron": "28.1.4",
+        "electron": "28.3.1",
         "electron-packager": "17.1.2",
         "electron-reloader": "1.2.3",
-        "electron-winstaller": "5.2.1",
+        "electron-winstaller": "5.3.1",
         "eslint": "8.57.0",
         "eslint-plugin-import": "2.29.1",
         "eslint-plugin-jest": "27.9.0",
@@ -72,7 +72,7 @@
         "jest-environment-jsdom": "29.7.0",
         "lint-staged": "15.2.2",
         "parcel-bundler": "1.12.5",
-        "sass": "1.70.0",
+        "sass": "1.76.0",
         "ts-jest": "29.1.2",
         "ts-node": "10.9.2",
         "typescript": "5.4.5"
